@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles, Cpu, ShieldCheck, Database, Cloud, Smartphone, Workflow, ChevronRight, Award, CheckCircle2 } from 'lucide-react';
 import productsData from '../data/products.json';
 import servicesData from '../data/services.json';
+import ProductShowcase from '../components/ProductShowcase';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Testimonials from '../components/Testimonials';
 
@@ -101,71 +102,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. DEVELOPED PRODUCT LOGOS & DYNAMIC DETAILS */}
-      <section className="section-padding" style={{ background: '#ffffff', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 3.5rem auto' }}>
-            <span className="glass-pill" style={{ marginBottom: '1rem' }}>Proprietary Software Suite</span>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#0f172a' }}>
-              Our Developed <span className="gradient-text">Products</span>
-            </h2>
-            <p style={{ color: '#475569', fontSize: '1.05rem', marginTop: '0.5rem' }}>
-              Click on any product logo or card to open detailed specifications, sample screenshots, and client case studies.
-            </p>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}>
-            {productsData.map((product, idx) => (
-              <motion.div
-                key={product.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
-                whileHover={{ y: -6 }}
-              >
-                <Link
-                  to={`/products/${product.id}`}
-                  style={{ textDecoration: 'none', display: 'block' }}
-                  className="glass-panel"
-                >
-                  <div style={{ padding: '1.75rem', textAlign: 'center' }}>
-                    <div
-                      style={{
-                        width: '70px',
-                        height: '70px',
-                        margin: '0 auto 1.25rem auto',
-                        borderRadius: '18px',
-                        overflow: 'hidden',
-                        border: '2px solid #e2e8f0',
-                        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)',
-                      }}
-                    >
-                      <img src={product.logo} alt={product.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    </div>
-
-                    <span style={{ fontSize: '0.75rem', background: '#e0f2fe', color: '#0369a1', padding: '4px 10px', borderRadius: '12px', fontWeight: 700, display: 'inline-block', marginBottom: '0.75rem' }}>
-                      {product.badge}
-                    </span>
-
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.5rem' }}>
-                      {product.name}
-                    </h3>
-                    
-                    <p style={{ color: '#475569', fontSize: '0.85rem', lineHeight: '1.5', marginBottom: '1.25rem', height: '2.6em', overflow: 'hidden' }}>
-                      {product.shortDescription}
-                    </p>
-
-                    <span style={{ fontSize: '0.88rem', color: '#0284c7', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                      View Product Details <ChevronRight size={16} />
-                    </span>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* 2. DEVELOPED PRODUCT LOGOS & DYNAMIC DETAILS (Interactive Spotlight Showcase) */}
+      <ProductShowcase />
 
       {/* 3. SERVICES LIST PROVIDING BY ZADROIT */}
       <section className="section-padding" style={{ background: '#f8fafc', borderBottom: '1px solid #e2e8f0' }}>

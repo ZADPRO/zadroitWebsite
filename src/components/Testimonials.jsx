@@ -46,12 +46,7 @@ export default function Testimonials() {
                 </p>
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', borderTop: '1px solid #f1f5f9', paddingTop: '1.25rem' }}>
-                <img
-                  src={item.avatar}
-                  alt={item.name}
-                  style={{ width: '48px', height: '48px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #0284c7' }}
-                />
+              <div style={{ borderTop: '1px solid #f1f5f9', paddingTop: '1.25rem' }}>
                 <div>
                   <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#0f172a' }}>{item.name}</h4>
                   <span style={{ fontSize: '0.82rem', color: '#64748b', display: 'block' }}>{item.role}, {item.company}</span>
