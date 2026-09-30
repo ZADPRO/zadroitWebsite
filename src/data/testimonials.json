@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Sophia Martinez",
+    "role": "Chief Technology Officer",
+    "company": "Nexus Logistics Inc.",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
+    "rating": 5,
+    "content": "Zadroit transformed our business approach with their innovative solutions. Their SAP integration expertise and 24/7 support have been invaluable for our nationwide growth. Highly recommended!"
+  },
+  {
+    "id": 2,
+    "name": "Emma Watson",
+    "role": "Operations Director",
+    "company": "Vidyalaya Institutions",
+    "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80",
+    "rating": 5,
+    "content": "The team at Zadroit exceeded our expectations. Implementation of ZAdPro Yoke ERP streamlined our multi-branch student management and fee collection beyond expectations."
+  },
+  {
+    "id": 3,
+    "name": "Olivia Bennett",
+    "role": "Head of Digital Transformation",
+    "company": "Apex Micro Finance",
+    "avatar": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=200&q=80",
+    "rating": 5,
+    "content": "We are thrilled with the results! Zadroit's personalized service helped us streamline field operations and enhance loan processing efficiency across all regional centers."
+  },
+  {
+    "id": 4,
+    "name": "Rajesh Kumar",
+    "role": "Managing Director",
+    "company": "Southern Cargo Movers",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+    "rating": 5,
+    "content": "ZAdPro Express Logistics automated our entire barcode consignment booking, hub manifests, and live tracking. Their engineering quality is world-class!"
+  }
+]

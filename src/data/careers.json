@@ -1,0 +1,94 @@
+[
+  {
+    "id": "senior-react-frontend-engineer",
+    "title": "Senior React Frontend Engineer",
+    "department": "Engineering",
+    "location": "Salem, TN / Remote (India)",
+    "type": "Full-Time",
+    "experience": "3 - 5 Years",
+    "salaryRange": "₹8,00,000 - ₹14,00,000 PA",
+    "shortDescription": "We are seeking a passionate React.js developer to build modern, responsive, and animated user interfaces for our enterprise SaaS products.",
+    "responsibilities": [
+      "Develop high-performance, modular React frontend web applications",
+      "Collaborate with UX designers to translate wireframes into interactive interfaces",
+      "Optimize applications for maximum speed, responsiveness, and accessibility",
+      "Integrate RESTful APIs and WebSocket state managers"
+    ],
+    "requirements": [
+      "Proficient in React 18+, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS",
+      "Experience with Framer Motion, React Router, and state management (Redux/Zustand)",
+      "Strong understanding of responsive web layout principles and cross-browser compatibility",
+      "Familiarity with Git, Vite, and modern CI/CD deployment pipelines"
+    ],
+    "postedDate": "September 2026"
+  },
+  {
+    "id": "cloud-devops-engineer",
+    "title": "Cloud DevOps & Infrastructure Engineer",
+    "department": "Cloud & Operations",
+    "location": "Salem, TN / Hybrid",
+    "type": "Full-Time",
+    "experience": "4 - 6 Years",
+    "salaryRange": "₹10,00,000 - ₹18,00,000 PA",
+    "shortDescription": "Looking for an experienced DevOps Specialist to manage AWS cloud deployments, Docker containers, and automated Kubernetes clusters.",
+    "responsibilities": [
+      "Manage and scale multi-tenant AWS and Oracle Cloud Infrastructure (OCI)",
+      "Build automated CI/CD pipelines using GitHub Actions and Jenkins",
+      "Monitor cluster health, implement auto-scaling policies, and manage disaster recovery",
+      "Enforce Infrastructure as Code (Terraform) and DevSecOps security policies"
+    ],
+    "requirements": [
+      "Hands-on experience with AWS (EC2, S3, RDS, EKS) and Docker/Kubernetes",
+      "Proficiency in Terraform, Bash/Python scripting, and Nginx configuration",
+      "Knowledge of Prometheus, Grafana, and ELK logging stacks",
+      "AWS Certified Solutions Architect or SysOps certification is a plus"
+    ],
+    "postedDate": "September 2026"
+  },
+  {
+    "id": "sap-integration-consultant",
+    "title": "SAP Integration Consultant (CPI / ABAP)",
+    "department": "Enterprise ERP",
+    "location": "Salem, TN / Client Locations",
+    "type": "Full-Time",
+    "experience": "3 - 7 Years",
+    "salaryRange": "₹12,00,000 - ₹22,00,000 PA",
+    "shortDescription": "Architect and implement SAP CPI & OData integration flows connecting SAP S/4HANA with third-party web & mobile applications.",
+    "responsibilities": [
+      "Design bi-directional integration flows using SAP Cloud Integration (CPI)",
+      "Develop custom OData services and ABAP RFC functions in S/4HANA",
+      "Troubleshoot API payloads, XML/JSON transformations, and security certificates",
+      "Provide technical consulting to enterprise clients during implementation phase"
+    ],
+    "requirements": [
+      "Solid experience in SAP CPI, Groovy Scripting, and XML/JSON mapping",
+      "Hands-on ABAP development experience for OData service creation",
+      "Strong domain knowledge in SD, MM, and FI module data structures",
+      "Excellent client communication and problem-solving skills"
+    ],
+    "postedDate": "August 2026"
+  },
+  {
+    "id": "ai-ml-solutions-architect",
+    "title": "AI / Machine Learning Engineer",
+    "department": "AI Innovation",
+    "location": "Salem, TN / Remote",
+    "type": "Full-Time",
+    "experience": "2 - 5 Years",
+    "salaryRange": "₹9,00,000 - ₹16,00,000 PA",
+    "shortDescription": "Join our AI team to build predictive health algorithms, computer vision pipelines, and intelligent NLP chatbots for our products.",
+    "responsibilities": [
+      "Train and deploy Python machine learning models using TensorFlow and PyTorch",
+      "Build REST APIs in FastAPI to serve real-time model inference",
+      "Develop custom RAG pipelines and LLM integrations for enterprise automation",
+      "Conduct data cleaning, feature engineering, and performance evaluation"
+    ],
+    "requirements": [
+      "Strong mathematical foundation in linear algebra, statistics, and ML algorithms",
+      "Proficiency in Python, OpenCV, Pandas, Scikit-Learn, and FastAPI/Flask",
+      "Experience deploying ML models to AWS Lambda or Docker environments",
+      "Passionate about cutting-edge AI breakthroughs and rapid prototyping"
+    ],
+    "postedDate": "September 2026"
+  }
+]

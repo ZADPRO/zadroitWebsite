@@ -1,0 +1,147 @@
+[
+  {
+    "id": "zadpro-microfin",
+    "name": "ZAdPro MicroFin",
+    "logo": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=300&q=80",
+    "badge": "Finance & Banking",
+    "tagline": "Easy & Secure Loan & Microfinance Management System",
+    "shortDescription": "Comprehensive microfinance platform enabling field agents and clients to handle loan applications, risk assessment, approvals, and repayment management with top-grade security.",
+    "fullDescription": "ZAdPro MicroFin is a state-of-the-art loan management and microfinance operating system. Designed for financial institutions, NBFCs, and credit cooperatives, it streamlines field agent operations, loan origination, client verification, repayment tracking, and automated interest calculations. Customers get a mobile-friendly dashboard to track active loans, apply for new credit, and make instant digital repayments.",
+    "features": [
+      "Field Agent Mobile App with offline sync",
+      "Automated Credit Scoring & KYC verification",
+      "Flexible Loan Repayment Schedules & Interest Calculators",
+      "Razorpay & Multi-gateway Payment Integration",
+      "Comprehensive Audit Trails & Financial Compliance Reports",
+      "Real-time SMS & Email Notification Alerts"
+    ],
+    "sampleImages": [
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "customers": [
+      { "name": "Apex Micro Credit", "location": "Tamil Nadu, India", "logo": "Apex Credit" },
+      { "name": "GrowthCap Financials", "location": "Bengaluru, India", "logo": "GrowthCap" },
+      { "name": "TrustFirst NBFC", "location": "Coimbatore, India", "logo": "TrustFirst" }
+    ],
+    "techStack": ["React", "Node.js", "PostgreSQL", "Docker", "Redis", "Razorpay API"],
+    "liveDemoAvailable": true
+  },
+  {
+    "id": "zadpro-yoke",
+    "name": "ZAdPro Yoke",
+    "logo": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=300&q=80",
+    "badge": "Education ERP",
+    "tagline": "All-in-One Solution for Educational Institution Management",
+    "shortDescription": "Simplify student management, online classes, fee collection, and administrative coordination with 6 dedicated role portals.",
+    "fullDescription": "ZAdPro Yoke is an enterprise-grade ERP designed specifically for schools, colleges, and polytechnics. With custom portals for Super Admin, Principal, Teachers, Students, Parents, and Accountants, Yoke automates attendance tracking, gradebook generation, exam schedules, online fee collection with instant receipts, and bus tracking.",
+    "features": [
+      "6 Tiered Admin Roles (SuperAdmin, Staff, Student, Parent, Finance, Transport)",
+      "Automated Fee Collection & Online Payment Gateway (Razorpay)",
+      "Digital Gradebooks, Report Card Generator & Exam Scheduler",
+      "Live Attendance Tracking via Biometric & Mobile QR",
+      "Interactive Parent-Teacher Messaging & Circular Announcements",
+      "Library & Inventory Management Module"
+    ],
+    "sampleImages": [
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=800&q=80"
+    ],
+    "customers": [
+      { "name": "Vidyalaya International School", "location": "Salem, India", "logo": "Vidyalaya" },
+      { "name": "St. Joseph Technical Campus", "location": "Chennai, India", "logo": "St. Joseph" },
+      { "name": "Greenwood Academy", "location": "Madurai, India", "logo": "Greenwood" }
+    ],
+    "techStack": ["React", "Express.js", "MongoDB", "AWS S3", "Socket.io"],
+    "liveDemoAvailable": true
+  },
+  {
+    "id": "zadpro-indhaa",
+    "name": "ZAdPro Indhaa",
+    "logo": "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=300&q=80",
+    "badge": "On-Demand SuperApp",
+    "tagline": "One-Stop Hub for Food, Instamart Groceries, Travel & Parcel Delivery",
+    "shortDescription": "SuperApp platform linking customers, merchants, and delivery partners for hyper-local commerce, travel, and logistics.",
+    "fullDescription": "ZAdPro Indhaa empowers multi-vendor ecosystems by consolidating food ordering, grocery delivery, ride hailing, and package courier services into a single unified mobile experience. Includes live GPS tracking, dynamic fare calculation, merchant store manager, and instant vendor payouts.",
+    "features": [
+      "Hyper-local Food & Grocery Ordering Ecosystem",
+      "Live Delivery Agent Tracking & Automated Route Dispatching",
+      "Intercity & Local Parcel Express Booking",
+      "Merchant Inventory Management & Order Acceptance Console",
+      "Built-in Customer Loyalty Wallet & Discount Coupon Engine",
+      "Multi-language Support for Regional Reach"
+    ],
+    "sampleImages": [
+      "https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
+    ],
+    "customers": [
+      { "name": "FreshCart Marts", "location": "Salem & Erode, India", "logo": "FreshCart" },
+      { "name": "QuickBite Delivery Co.", "location": "Coimbatore, India", "logo": "QuickBite" },
+      { "name": "Metro Express Couriers", "location": "Trichy, India", "logo": "Metro Express" }
+    ],
+    "techStack": ["React Native", "Node.js", "Firebase", "Google Maps API", "Redis"],
+    "liveDemoAvailable": true
+  },
+  {
+    "id": "zadpro-express-logistics",
+    "name": "ZAdPro Express Logistics",
+    "logo": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=300&q=80",
+    "badge": "Supply Chain & Logistics",
+    "tagline": "Optimize Parcel Booking, Fleet Dispatching & Real-Time Tracking ERP",
+    "shortDescription": "Enterprise logistics software for parcel booking, hub manifest creation, driver dispatch, and automated barcode scanning.",
+    "fullDescription": "ZAdPro Express Logistics is an end-to-end transport and parcel management ERP built for courier companies, logistics providers, and freight handlers. Automate branch bookings, print thermal labels, manage hub-to-hub manifests, calculate weight-based pricing, and provide customers with live parcel status tracking.",
+    "features": [
+      "Consignment Booking & Thermal Barcode Label Generation",
+      "Hub-to-Hub Transport Manifest & Vehicle Load Planning",
+      "Driver Delivery Mobile App with Digital Proof of Delivery (POD)",
+      "Automated Weight, Volume & Distance Price Matrix",
+      "Customer Self-Service Tracking Portal & WhatsApp Alerts",
+      "Fleet Maintenance, Fuel Cost & Driver Commission Accounting"
+    ],
+    "sampleImages": [
+      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=800&q=80"
+    ],
+    "customers": [
+      { "name": "VRL Speed Cargo Partners", "location": "Pan India", "logo": "VRL Cargo" },
+      { "name": "Royal Transporters", "location": "Salem, India", "logo": "Royal Trans" },
+      { "name": "Southern Logistics Ltd.", "location": "Chennai, India", "logo": "Southern Logistics" }
+    ],
+    "techStack": ["React", "Go", "PostgreSQL", "Kafka", "Docker", "Zebra Thermal SDK"],
+    "liveDemoAvailable": true
+  },
+  {
+    "id": "medpredit",
+    "name": "MedPredit",
+    "logo": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=300&q=80",
+    "badge": "Digital Health & AI",
+    "tagline": "Track. Assess. Improve. Your Family Digital Health Companion",
+    "shortDescription": "AI-powered wellness assessment, chronic condition tracking, and preventive health insights for individuals and corporate wellness.",
+    "fullDescription": "MedPredit is a modern digital health platform leveraging AI algorithms to assess health metrics, monitor lifestyle habits, manage chronic conditions, and predict health risk factors. It allows users to store lab reports securely, connect smart wearable devices, and receive personalized preventive health advice.",
+    "features": [
+      "AI Health Risk Calculator & Predictive Wellness Assessment",
+      "Secure Encrypted Health Record Vault (HIPAA Compliant)",
+      "Smart Wearable Integration (Apple Health, Fitbit, Google Fit)",
+      "Vitals Tracking (Blood Pressure, Glucose, BMI, Heart Rate)",
+      "Family Health Profiles & Emergency SOS Beacon",
+      "Teleconsultation & Doctor Appointment Booking"
+    ],
+    "sampleImages": [
+      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80"
+    ],
+    "customers": [
+      { "name": "CareMax Health Systems", "location": "Chennai, India", "logo": "CareMax" },
+      { "name": "Apex Diagnostics", "location": "Coimbatore, India", "logo": "Apex Health" },
+      { "name": "Corporate Wellness India", "location": "Bengaluru, India", "logo": "CorpWellness" }
+    ],
+    "techStack": ["React", "Python (FastAPI)", "TensorFlow Lite", "PostgreSQL", "AWS HealthLake"],
+    "liveDemoAvailable": true
+  }
+]

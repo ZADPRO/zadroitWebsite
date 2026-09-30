@@ -1,0 +1,92 @@
+[
+  {
+    "id": "oracle-software-solution",
+    "title": "Oracle Software Solutions",
+    "icon": "Database",
+    "shortDesc": "Custom ERP, CRM, and business process automation built on robust Oracle platforms.",
+    "fullDesc": "Empower your business with tailored Oracle ERP, NetSuite, and E-Business Suite implementations. We customize, integrate, and optimize Oracle business applications to automate core processes, streamline finance, and improve supply chain visibility.",
+    "benefits": [
+      "Custom ERP & CRM workflow automation",
+      "Database tuning & performance optimization",
+      "Seamless migration to Oracle Cloud Infrastructure (OCI)",
+      "Financial, Inventory, & HR module integration"
+    ],
+    "deliverables": ["Custom Oracle Module", "Database Schema Optimization", "24/7 Managed Oracle Support"],
+    "techStack": ["Oracle Database 19c/23c", "Oracle PL/SQL", "Oracle APEX", "OCI", "Java Enterprise"]
+  },
+  {
+    "id": "sap-integration",
+    "title": "SAP Integration",
+    "icon": "Workflow",
+    "shortDesc": "Seamlessly connect SAP S/4HANA & ECC with your enterprise systems for real-time automation.",
+    "fullDesc": "Bridge the gap between your SAP core and peripheral web, mobile, and third-party SaaS applications. Our SAP Integration experts utilize SAP CPI (Cloud Integration), RFC, and OData services to ensure real-time data synchronization.",
+    "benefits": [
+      "Bi-directional SAP S/4HANA OData & REST API integration",
+      "Automated order-to-cash & procure-to-pay pipelines",
+      "Real-time SAP inventory & master data sync",
+      "Reduced manual data entry & zero data loss"
+    ],
+    "deliverables": ["SAP CPI Integration Pipelines", "Custom ABAP OData Services", "Middleware Architecture"],
+    "techStack": ["SAP S/4HANA", "SAP CPI", "ABAP", "SAP Fiori", "REST/OData API"]
+  },
+  {
+    "id": "web-mobile-app-development",
+    "title": "Web & Mobile App Development",
+    "icon": "Smartphone",
+    "shortDesc": "Designing high-performance responsive web applications and native/cross-platform mobile apps.",
+    "fullDesc": "We engineer visually stunning, ultra-fast web apps and mobile applications tailored for iOS and Android. From consumer-facing React web platforms to feature-rich React Native mobile applications, we transform user experience into business growth.",
+    "benefits": [
+      "Pixel-perfect responsive UX/UI design",
+      "Cross-platform iOS & Android mobile apps",
+      "Progressive Web App (PWA) capabilities",
+      "Blazing fast performance & high SEO optimization"
+    ],
+    "deliverables": ["Production Web Portal", "iOS & Android Mobile App", "RESTful API Backend", "Admin Dashboard"],
+    "techStack": ["React", "React Native", "Node.js", "TypeScript", "Tailwind CSS/Vanilla CSS", "Vite"]
+  },
+  {
+    "id": "cloud-computing-solutions",
+    "title": "Cloud Computing Solutions",
+    "icon": "Cloud",
+    "shortDesc": "Cloud migration, infrastructure deployment, DevOps automation, and 99.99% uptime management.",
+    "fullDesc": "Migrate, scale, and optimize your IT infrastructure with our cloud computing expertise. We specialize in AWS, Azure, and Google Cloud, helping you automate CI/CD pipelines, lower cloud spending, and ensure disaster recovery.",
+    "benefits": [
+      "Zero-downtime legacy to cloud migration",
+      "Kubernetes & Docker container orchestration",
+      "Infrastructure as Code (Terraform / CloudFormation)",
+      "Continuous Monitoring & Automated Security Backups"
+    ],
+    "deliverables": ["Cloud Architecture Plan", "CI/CD Deployment Pipelines", "Cloud Cost Optimization Audit"],
+    "techStack": ["AWS", "Microsoft Azure", "Google Cloud Platform", "Docker", "Kubernetes", "Terraform"]
+  },
+  {
+    "id": "ai-machine-learning-development",
+    "title": "AI & Machine Learning Development",
+    "icon": "Cpu",
+    "shortDesc": "Harness intelligent automation, predictive analytics, NLP, and computer vision solutions.",
+    "fullDesc": "Transform raw business data into actionable intelligence. We build custom machine learning models, predictive forecasting tools, automated chatbots, and computer vision applications that reduce manual overhead and boost decision accuracy.",
+    "benefits": [
+      "Predictive analytics for demand forecasting & risk",
+      "Custom LLM & RAG Chatbot Integration",
+      "Automated document extraction & OCR",
+      "Real-time anomaly detection & fraud monitoring"
+    ],
+    "deliverables": ["Custom ML Model Endpoint", "Data Pipeline", "AI Dashboard Integration"],
+    "techStack": ["Python", "TensorFlow", "PyTorch", "Scikit-Learn", "OpenAI API", "FastAPI"]
+  },
+  {
+    "id": "cybersecurity-services",
+    "title": "Cybersecurity Services",
+    "icon": "ShieldCheck",
+    "shortDesc": "Comprehensive security audits, threat detection, penetration testing, and data protection.",
+    "fullDesc": "Protect your enterprise against cyber vulnerabilities and compliance penalties. Our certified security professionals conduct penetration testing, vulnerability assessments, SOC monitoring, and end-to-end data encryption.",
+    "benefits": [
+      "Penetration testing & vulnerability assessment (VAPT)",
+      "GDPR, ISO 27001, & HIPAA compliance readiness",
+      "24/7 Security Threat Detection & Incident Response",
+      "Employee Security Awareness & Phishing Defense"
+    ],
+    "deliverables": ["VAPT Security Audit Report", "Remediation Patching", "Compliance Readiness Certificate"],
+    "techStack": ["Wireshark", "Metasploit", "Burp Suite", "Kali Linux", "Cloudflare Security", "SIEM"]
+  }
+]
