@@ -63,7 +63,7 @@ export default function ApproachMap() {
   ];
 
   return (
-    <div className="glass-panel" style={{ padding: '3rem 2rem', position: 'relative', overflow: 'hidden', background: '#ffffff', border: '1px solid #e2e8f0' }}>
+    <div className="glass-panel" style={{ padding: '3rem 2rem', position: 'relative', overflow: 'hidden' }}>
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
         <span className="glass-pill" style={{ marginBottom: '0.75rem' }}>Technical Architecture Map</span>
         <h3 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#0f172a' }}>
@@ -92,13 +92,13 @@ export default function ApproachMap() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
               style={{
-                background: isSelected ? '#f0f9ff' : '#f8fafc',
-                border: isSelected ? '2px solid #0284c7' : '1px solid #e2e8f0',
+                background: isSelected ? 'var(--brand-orange-light, rgba(249, 115, 22, 0.08))' : 'rgba(241, 245, 249, 0.5)',
+                border: isSelected ? '2px solid var(--brand-primary, #ea580c)' : '1px solid var(--border-color, #e2e8f0)',
                 borderRadius: '16px',
                 padding: '1.25rem 1rem',
                 textAlign: 'center',
                 cursor: 'pointer',
-                color: isSelected ? '#0284c7' : '#475569',
+                color: isSelected ? 'var(--brand-primary, #ea580c)' : '#475569',
                 transition: 'all 0.3s ease',
                 display: 'flex',
                 flexDirection: 'column',
@@ -111,15 +111,15 @@ export default function ApproachMap() {
                   width: '42px',
                   height: '42px',
                   borderRadius: '12px',
-                  background: isSelected ? '#0284c7' : '#e2e8f0',
+                  background: isSelected ? 'var(--brand-primary, #ea580c)' : '#e2e8f0',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}
               >
-                <Icon size={20} color={isSelected ? '#ffffff' : '#0284c7'} />
+                <Icon size={20} color={isSelected ? '#ffffff' : 'var(--brand-primary, #ea580c)'} />
               </div>
-              <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#0284c7', letterSpacing: '0.1em' }}>STEP {item.step}</span>
+              <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--brand-primary, #ea580c)', letterSpacing: '0.1em' }}>STEP {item.step}</span>
               <span style={{ fontSize: '0.85rem', fontWeight: 700, color: '#0f172a', lineHeight: '1.3' }}>{item.title.split('&')[0]}</span>
             </motion.button>
           );
@@ -134,8 +134,7 @@ export default function ApproachMap() {
           exit={{ opacity: 0, y: -15 }}
           transition={{ duration: 0.3 }}
           style={{
-            background: '#f8fafc',
-            border: '1px solid #bae6fd',
+            border: '1px solid var(--border-color, #fed7aa)',
             borderRadius: '16px',
             padding: '2rem',
             display: 'grid',
@@ -143,9 +142,10 @@ export default function ApproachMap() {
             gap: '2rem',
             alignItems: 'center'
           }}
+          className="glass-panel"
         >
           <div>
-            <span style={{ background: '#e0f2fe', color: '#0369a1', padding: '4px 12px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 700 }}>
+            <span className="glass-pill" style={{ padding: '4px 12px', fontSize: '0.8rem' }}>
               {steps[activeStep].badge}
             </span>
             <h4 style={{ fontSize: '1.6rem', fontWeight: 800, marginTop: '0.75rem', marginBottom: '0.75rem', color: '#0f172a' }}>
@@ -160,8 +160,8 @@ export default function ApproachMap() {
             <h5 style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#64748b', marginBottom: '1rem' }}>Key Deliverables & Nodes</h5>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
               {steps[activeStep].techNodes.map((node, i) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: '#ffffff', padding: '10px 14px', borderRadius: '10px', fontSize: '0.88rem', color: '#0f172a', border: '1px solid #e2e8f0', fontWeight: 500 }}>
-                  <CheckCircle2 size={16} color="#0284c7" />
+                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: '#ffffff', padding: '10px 14px', borderRadius: '10px', fontSize: '0.88rem', color: '#0f172a', border: '1px solid var(--border-color, #e2e8f0)', fontWeight: 500 }}>
+                  <CheckCircle2 size={16} color="var(--brand-primary, #ea580c)" />
                   <span>{node}</span>
                 </div>
               ))}

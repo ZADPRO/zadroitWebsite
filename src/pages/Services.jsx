@@ -69,8 +69,6 @@ export default function Services() {
                   style={{
                     padding: '2.25rem 2rem',
                     borderRadius: '24px',
-                    background: '#ffffff',
-                    border: '1.5px solid #bae6fd',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
@@ -78,7 +76,7 @@ export default function Services() {
                 >
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '1.25rem' }}>
-                      <div style={{ width: '48px', height: '48px', borderRadius: '14px', background: 'linear-gradient(135deg, #0284c7, #06b6d4)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <div style={{ width: '48px', height: '48px', borderRadius: '14px', background: 'linear-gradient(135deg, var(--brand-primary, #ea580c), var(--brand-secondary, #f97316))', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                         <ServiceIcon size={24} color="#ffffff" />
                       </div>
                       <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#0f172a' }}>
@@ -133,16 +131,16 @@ export default function Services() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-            <div className="glass-panel" style={{ padding: '2rem', background: '#f8fafc' }}>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0284c7', marginBottom: '0.75rem' }}>Cost-Effective & Scalable IT</h3>
+            <div className="glass-panel" style={{ padding: '2rem' }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--brand-primary, #ea580c)', marginBottom: '0.75rem' }}>Cost-Effective & Scalable IT</h3>
               <p style={{ color: '#475569', fontSize: '0.92rem', lineHeight: '1.6' }}>Cloud-native systems and automation tools optimizing efficiency and ensuring seamless long-term scaling.</p>
             </div>
-            <div className="glass-panel" style={{ padding: '2rem', background: '#f8fafc' }}>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#4f46e5', marginBottom: '0.75rem' }}>Security & GDPR Compliance</h3>
+            <div className="glass-panel" style={{ padding: '2rem' }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--brand-primary, #ea580c)', marginBottom: '0.75rem' }}>Security & GDPR Compliance</h3>
               <p style={{ color: '#475569', fontSize: '0.92rem', lineHeight: '1.6' }}>End-to-end encryption, multi-layered firewall security, and strict GDPR & HIPAA regulatory compliance.</p>
             </div>
-            <div className="glass-panel" style={{ padding: '2rem', background: '#f8fafc' }}>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#059669', marginBottom: '0.75rem' }}>24/7 Technical Support</h3>
+            <div className="glass-panel" style={{ padding: '2rem' }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--brand-primary, #ea580c)', marginBottom: '0.75rem' }}>24/7 Technical Support</h3>
               <p style={{ color: '#475569', fontSize: '0.92rem', lineHeight: '1.6' }}>Proactive monitoring, regular patch updates, and rapid SLA incident response for maximum system uptime.</p>
             </div>
           </div>

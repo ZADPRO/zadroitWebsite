@@ -51,13 +51,13 @@ export default function ServiceDetail() {
   return (
     <div>
       {/* 1. HERO BANNER & BREADCRUMB */}
-      <section style={{ paddingTop: '9rem', paddingBottom: '4.5rem', position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg, #e0f2fe 0%, #f8fafc 100%)' }}>
+      <section className="hero-fullscreen" style={{ paddingTop: '9rem', paddingBottom: '4.5rem', position: 'relative', overflow: 'hidden' }}>
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Breadcrumb Navigation */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.88rem', color: '#64748b', marginBottom: '1.5rem', fontWeight: 600 }}>
-            <Link to="/" style={{ color: '#0284c7', textDecoration: 'none' }}>Home</Link>
+            <Link to="/" style={{ color: 'var(--brand-primary, #ea580c)', textDecoration: 'none' }}>Home</Link>
             <ChevronRight size={14} />
-            <Link to="/services" style={{ color: '#0284c7', textDecoration: 'none' }}>Services</Link>
+            <Link to="/services" style={{ color: 'var(--brand-primary, #ea580c)', textDecoration: 'none' }}>Services</Link>
             <ChevronRight size={14} />
             <span style={{ color: '#0f172a' }}>{service.title}</span>
           </div>
@@ -68,7 +68,7 @@ export default function ServiceDetail() {
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '1rem' }}>
-              <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: 'linear-gradient(135deg, #0284c7, #2563eb)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 6px 20px rgba(2, 132, 199, 0.25)', flexShrink: 0 }}>
+              <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: 'linear-gradient(135deg, var(--brand-primary, #ea580c), var(--brand-secondary, #f97316))', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 6px 20px var(--shadow-glow)', flexShrink: 0 }}>
                 <ServiceIcon size={28} color="#ffffff" />
               </div>
               <h1 style={{ fontSize: '3rem', fontWeight: 800, color: '#0f172a', lineHeight: 1.15 }}>
@@ -76,7 +76,7 @@ export default function ServiceDetail() {
               </h1>
             </div>
 
-            <p style={{ color: '#0284c7', fontSize: '1.25rem', fontWeight: 700, marginBottom: '1.25rem' }}>
+            <p style={{ color: 'var(--brand-primary, #ea580c)', fontSize: '1.25rem', fontWeight: 700, marginBottom: '1.25rem' }}>
               {service.tagline}
             </p>
 
@@ -97,12 +97,12 @@ export default function ServiceDetail() {
       </section>
 
       {/* 2. SERVICE OVERVIEW */}
-      <section className="section-padding" style={{ background: '#ffffff', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
+      <section className="section-padding" style={{ borderTop: '1px solid var(--border-color, #e2e8f0)', borderBottom: '1px solid var(--border-color, #e2e8f0)' }}>
         <div className="container">
-          <div className="glass-panel" style={{ padding: '3rem', borderRadius: '24px', background: '#f8fafc', border: '1.5px solid #bae6fd' }}>
+          <div className="glass-panel" style={{ padding: '3rem', borderRadius: '24px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
               <div>
-                <span style={{ fontSize: '0.82rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#0284c7', fontWeight: 800, display: 'block', marginBottom: '0.5rem' }}>
+                <span style={{ fontSize: '0.82rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--brand-primary, #ea580c)', fontWeight: 800, display: 'block', marginBottom: '0.5rem' }}>
                   In-Depth Overview
                 </span>
                 <h2 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#0f172a', marginBottom: '1.25rem' }}>
@@ -113,14 +113,14 @@ export default function ServiceDetail() {
                 </p>
               </div>
 
-              <div style={{ background: '#ffffff', padding: '2rem', borderRadius: '20px', border: '1px solid #bae6fd', boxShadow: '0 8px 25px rgba(2, 132, 199, 0.08)' }}>
+              <div className="glass-panel" style={{ padding: '2rem', borderRadius: '20px' }}>
                 <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#0f172a', marginBottom: '1.25rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <Award size={20} color="#0284c7" /> Key Business Advantages
+                  <Award size={20} style={{ color: 'var(--brand-primary, #ea580c)' }} /> Key Business Advantages
                 </h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
                   {service.benefits.map((b, idx) => (
                     <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '0.92rem', color: '#0f172a' }}>
-                      <CheckCircle2 size={18} color="#059669" style={{ flexShrink: 0, marginTop: '2px' }} />
+                      <CheckCircle2 size={18} style={{ color: 'var(--brand-primary, #ea580c)', flexShrink: 0, marginTop: '2px' }} />
                       <span style={{ fontWeight: 600 }}>{b}</span>
                     </div>
                   ))}
@@ -132,7 +132,7 @@ export default function ServiceDetail() {
       </section>
 
       {/* 3. CORE CAPABILITIES & OFFERINGS */}
-      <section className="section-padding" style={{ background: '#f8fafc' }}>
+      <section className="section-padding">
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 3.5rem auto' }}>
             <span className="glass-pill" style={{ marginBottom: '1rem' }}>Key Deliverables</span>
@@ -151,10 +151,10 @@ export default function ServiceDetail() {
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
                 whileHover={{ y: -6 }}
                 className="glass-panel"
-                style={{ padding: '2rem', borderRadius: '20px', background: '#ffffff', border: '1.5px solid #bae6fd', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+                style={{ padding: '2rem', borderRadius: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
               >
                 <div>
-                  <div style={{ width: '44px', height: '44px', borderRadius: '12px', background: '#e0f2fe', color: '#0284c7', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, marginBottom: '1.25rem' }}>
+                  <div className="glass-pill" style={{ width: '44px', height: '44px', borderRadius: '12px', padding: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, marginBottom: '1.25rem' }}>
                     0{idx + 1}
                   </div>
                   <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.75rem' }}>
@@ -171,7 +171,7 @@ export default function ServiceDetail() {
       </section>
 
       {/* 4. WORK PROCESS / OUR APPROACH */}
-      <section className="section-padding" style={{ background: '#ffffff', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
+      <section className="section-padding" style={{ borderTop: '1px solid var(--border-color, #e2e8f0)', borderBottom: '1px solid var(--border-color, #e2e8f0)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 3.5rem auto' }}>
             <span className="glass-pill" style={{ marginBottom: '1rem' }}>Streamlined Workflow</span>
@@ -184,15 +184,14 @@ export default function ServiceDetail() {
             {service.process.map((stepItem, idx) => (
               <div
                 key={idx}
+                className="glass-panel"
                 style={{
-                  background: '#f0f9ff',
-                  border: '1.5px solid #bae6fd',
                   borderRadius: '20px',
                   padding: '2rem 1.5rem',
                   position: 'relative',
                 }}
               >
-                <span style={{ fontSize: '2rem', fontWeight: 900, color: '#0284c7', display: 'block', marginBottom: '0.5rem', opacity: 0.8 }}>
+                <span style={{ fontSize: '2rem', fontWeight: 900, color: 'var(--brand-primary, #ea580c)', display: 'block', marginBottom: '0.5rem', opacity: 0.8 }}>
                   {stepItem.step}
                 </span>
                 <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.5rem' }}>
@@ -208,7 +207,7 @@ export default function ServiceDetail() {
       </section>
 
       {/* 5. FREQUENTLY ASKED QUESTIONS (FAQ) */}
-      <section className="section-padding" style={{ background: '#f8fafc' }}>
+      <section className="section-padding">
         <div className="container" style={{ maxWidth: '850px' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <span className="glass-pill" style={{ marginBottom: '1rem' }}>Got Questions?</span>
@@ -224,9 +223,8 @@ export default function ServiceDetail() {
                 <div
                   key={idx}
                   onClick={() => setOpenFaq(isOpen ? null : idx)}
+                  className="glass-panel"
                   style={{
-                    background: '#ffffff',
-                    border: '1.5px solid #bae6fd',
                     borderRadius: '16px',
                     padding: '1.25rem 1.5rem',
                     cursor: 'pointer',
@@ -235,13 +233,13 @@ export default function ServiceDetail() {
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
                     <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#0f172a', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <HelpCircle size={18} color="#0284c7" style={{ flexShrink: 0 }} />
+                      <HelpCircle size={18} style={{ color: 'var(--brand-primary, #ea580c)', flexShrink: 0 }} />
                       {faq.q}
                     </h4>
                     <ChevronRight
                       size={20}
-                      color="#0284c7"
                       style={{
+                        color: 'var(--brand-primary, #ea580c)',
                         transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)',
                         transition: 'transform 0.2s ease',
                         flexShrink: 0,

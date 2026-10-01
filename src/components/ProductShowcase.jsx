@@ -59,19 +59,16 @@ export default function ProductShowcase() {
             <button
               onClick={handlePrev}
               aria-label="Previous Slide"
+              className="carousel-btn"
               style={{
                 width: '46px',
                 height: '46px',
                 borderRadius: '14px',
-                background: '#ffffff',
-                border: '1.5px solid #bae6fd',
-                color: '#0284c7',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 cursor: 'pointer',
                 transition: 'all 0.25s ease',
-                boxShadow: '0 4px 12px rgba(2, 132, 199, 0.08)',
               }}
             >
               <ChevronLeft size={22} />
@@ -79,19 +76,17 @@ export default function ProductShowcase() {
             <button
               onClick={handleNext}
               aria-label="Next Slide"
+              className="btn-primary"
               style={{
                 width: '46px',
                 height: '46px',
                 borderRadius: '14px',
-                background: '#0284c7',
-                border: 'none',
-                color: '#ffffff',
+                padding: 0,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 cursor: 'pointer',
                 transition: 'all 0.25s ease',
-                boxShadow: '0 4px 14px rgba(2, 132, 199, 0.3)',
               }}
             >
               <ChevronRight size={22} />
@@ -131,11 +126,9 @@ export default function ProductShowcase() {
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'space-between',
-                        background: 'linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%)',
-                        border: '1.5px solid #bae6fd',
+                        border: '1.5px solid var(--border-color, #fed7aa)',
                         borderRadius: '24px',
                         padding: '2rem 1.75rem',
-                        boxShadow: '0 8px 24px rgba(2, 132, 199, 0.08)',
                         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                         position: 'relative',
                       }}
@@ -150,16 +143,15 @@ export default function ProductShowcase() {
                               height: '60px',
                               borderRadius: '16px',
                               overflow: 'hidden',
-                              border: '2px solid #bae6fd',
+                              border: '2px solid var(--border-color, #fed7aa)',
                               background: '#ffffff',
                               padding: '4px',
-                              boxShadow: '0 4px 12px rgba(2, 132, 199, 0.12)',
                             }}
                           >
                             <img src={product.logo} alt={product.name} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} />
                           </div>
 
-                          <span style={{ fontSize: '0.75rem', background: '#e0f2fe', color: '#0369a1', padding: '5px 12px', borderRadius: '10px', fontWeight: 700 }}>
+                          <span className="glass-pill" style={{ fontSize: '0.75rem', padding: '5px 12px', borderRadius: '10px', fontWeight: 700 }}>
                             {product.badge}
                           </span>
                         </div>
@@ -169,7 +161,7 @@ export default function ProductShowcase() {
                           {product.name}
                         </h3>
 
-                        <p style={{ color: '#0284c7', fontSize: '0.92rem', fontWeight: 700, marginBottom: '0.85rem', lineHeight: '1.4' }}>
+                        <p style={{ color: 'var(--brand-primary, #ea580c)', fontSize: '0.92rem', fontWeight: 700, marginBottom: '0.85rem', lineHeight: '1.4' }}>
                           {product.tagline}
                         </p>
 
@@ -180,12 +172,12 @@ export default function ProductShowcase() {
                       </div>
 
                       {/* Bottom Action Footer */}
-                      <div style={{ borderTop: '1px solid #bae6fd', paddingTop: '1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                      <div style={{ borderTop: '1px solid var(--border-color, #e2e8f0)', paddingTop: '1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                         <span style={{ fontSize: '0.88rem', color: '#0f172a', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                          Explore Product <ChevronRight size={16} color="#0284c7" />
+                          Explore Product <ChevronRight size={16} style={{ color: 'var(--brand-primary, #ea580c)' }} />
                         </span>
                         
-                        <div style={{ width: '34px', height: '34px', borderRadius: '50%', background: '#0284c7', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', boxShadow: '0 4px 10px rgba(2, 132, 199, 0.3)' }}>
+                        <div style={{ width: '34px', height: '34px', borderRadius: '50%', background: 'var(--brand-primary, #ea580c)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', boxShadow: '0 4px 10px var(--shadow-glow)' }}>
                           <ArrowRight size={16} />
                         </div>
                       </div>
@@ -209,7 +201,7 @@ export default function ProductShowcase() {
                 width: currentIndex === idx ? '28px' : '10px',
                 height: '10px',
                 borderRadius: '5px',
-                background: currentIndex === idx ? '#0284c7' : '#cbd5e1',
+                background: currentIndex === idx ? 'var(--brand-primary, #ea580c)' : '#cbd5e1',
                 border: 'none',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',

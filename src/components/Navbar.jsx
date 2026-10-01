@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronRight, Palette, Check, Sparkles } from 'lucide-react';
+import { Menu, X, ChevronRight, Palette, Check, Sparkles, Sliders, Moon, Sun } from 'lucide-react';
 import ZadroitLogo from './ZadroitLogo';
 import { useTheme } from '../context/ThemeContext';
 
@@ -11,7 +11,7 @@ export default function Navbar() {
   const dropdownRef = useRef(null);
   const location = useLocation();
 
-  const { currentTheme, selectTheme, themesList } = useTheme();
+  const { currentTheme, selectTheme, themesList, customColors, updateCustomColors } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -150,27 +150,120 @@ export default function Navbar() {
                   position: 'absolute',
                   top: 'calc(100% + 10px)',
                   right: 0,
-                  width: '280px',
+                  width: '320px',
                   background: '#ffffff',
                   borderRadius: '16px',
                   border: '1px solid #e2e8f0',
                   boxShadow: '0 20px 35px -10px rgba(15, 23, 42, 0.2)',
-                  padding: '12px',
+                  padding: '14px',
                   zIndex: 200,
                   animation: 'fadeIn 0.2s ease',
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '6px 8px 12px', borderBottom: '1px solid #f1f5f9', marginBottom: '8px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontWeight: 700, color: '#0f172a' }}>
-                    <Sparkles size={15} style={{ color: currentTheme.primary }} />
-                    <span>Select Color Theme (10)</span>
+                {/* Custom Color Theme Picker Block */}
+                <div
+                  style={{
+                    background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)',
+                    borderRadius: '12px',
+                    padding: '12px',
+                    border: currentTheme.id === 'custom' ? `1.5px solid ${customColors.primary}` : '1px solid #e2e8f0',
+                    marginBottom: '12px',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontWeight: 700, color: '#0f172a' }}>
+                      <Sliders size={16} style={{ color: customColors.primary }} />
+                      <span>Custom Color Theme</span>
+                    </div>
+                    {currentTheme.id === 'custom' && (
+                      <span style={{ fontSize: '0.72rem', background: customColors.primary, color: '#fff', padding: '2px 8px', borderRadius: '10px', fontWeight: 700 }}>
+                        Active
+                      </span>
+                    )}
                   </div>
-                  <span style={{ fontSize: '0.75rem', background: '#f1f5f9', padding: '2px 8px', borderRadius: '10px', color: '#64748b', fontWeight: 600 }}>
-                    Global Style
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '10px' }}>
+                    <div>
+                      <label style={{ fontSize: '0.73rem', fontWeight: 600, color: '#475569', display: 'block', marginBottom: '4px' }}>Primary Color</label>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: '#ffffff', border: '1px solid #cbd5e1', padding: '4px 8px', borderRadius: '8px' }}>
+                        <input
+                          type="color"
+                          value={customColors.primary}
+                          onChange={(e) => updateCustomColors(e.target.value, customColors.secondary, customColors.isDark)}
+                          style={{ width: '24px', height: '24px', border: 'none', background: 'none', cursor: 'pointer', borderRadius: '4px' }}
+                        />
+                        <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: '#334155' }}>{customColors.primary}</span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label style={{ fontSize: '0.73rem', fontWeight: 600, color: '#475569', display: 'block', marginBottom: '4px' }}>Secondary Color</label>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: '#ffffff', border: '1px solid #cbd5e1', padding: '4px 8px', borderRadius: '8px' }}>
+                        <input
+                          type="color"
+                          value={customColors.secondary}
+                          onChange={(e) => updateCustomColors(customColors.primary, e.target.value, customColors.isDark)}
+                          style={{ width: '24px', height: '24px', border: 'none', background: 'none', cursor: 'pointer', borderRadius: '4px' }}
+                        />
+                        <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: '#334155' }}>{customColors.secondary}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <button
+                      onClick={() => updateCustomColors(customColors.primary, customColors.secondary, !customColors.isDark)}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        padding: '5px 10px',
+                        borderRadius: '6px',
+                        border: '1px solid #cbd5e1',
+                        background: customColors.isDark ? '#0f172a' : '#ffffff',
+                        color: customColors.isDark ? '#f8fafc' : '#0f172a',
+                        fontSize: '0.75rem',
+                        fontWeight: 600,
+                        cursor: 'pointer',
+                      }}
+                    >
+                      {customColors.isDark ? <Moon size={13} /> : <Sun size={13} />}
+                      <span>{customColors.isDark ? 'Dark Base' : 'Light Base'}</span>
+                    </button>
+
+                    <button
+                      onClick={() => {
+                        selectTheme('custom');
+                        setThemePickerOpen(false);
+                      }}
+                      style={{
+                        background: `linear-gradient(135deg, ${customColors.primary}, ${customColors.secondary})`,
+                        color: '#ffffff',
+                        border: 'none',
+                        padding: '6px 14px',
+                        borderRadius: '6px',
+                        fontSize: '0.78rem',
+                        fontWeight: 700,
+                        cursor: 'pointer',
+                        boxShadow: `0 2px 8px ${customColors.primary}40`,
+                      }}
+                    >
+                      Apply Custom
+                    </button>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '4px 4px 8px', borderBottom: '1px solid #f1f5f9', marginBottom: '8px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.82rem', fontWeight: 700, color: '#0f172a' }}>
+                    <Sparkles size={14} style={{ color: currentTheme.primary }} />
+                    <span>Preset Themes (25)</span>
+                  </div>
+                  <span style={{ fontSize: '0.72rem', background: '#f1f5f9', padding: '2px 8px', borderRadius: '10px', color: '#64748b', fontWeight: 600 }}>
+                    Instant Preset
                   </span>
                 </div>
 
-                <div style={{ maxHeight: '340px', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '4px', paddingRight: '2px' }}>
+                <div style={{ maxHeight: '280px', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '4px', paddingRight: '2px' }}>
                   {themesList.map((t) => {
                     const isSelected = currentTheme.id === t.id;
                     return (
@@ -185,10 +278,10 @@ export default function Navbar() {
                           alignItems: 'center',
                           justifyContent: 'space-between',
                           width: '100%',
-                          padding: '8px 10px',
+                          padding: '7px 10px',
                           borderRadius: '10px',
                           border: isSelected ? `1.5px solid ${t.primary}` : '1px solid transparent',
-                          background: isSelected ? 'rgba(241, 245, 249, 0.8)' : 'transparent',
+                          background: isSelected ? 'rgba(241, 245, 249, 0.9)' : 'transparent',
                           cursor: 'pointer',
                           transition: 'all 0.15s ease',
                           textAlign: 'left',
@@ -203,22 +296,22 @@ export default function Navbar() {
                         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                           <div
                             style={{
-                              width: '20px',
-                              height: '20px',
+                              width: '18px',
+                              height: '18px',
                               borderRadius: '50%',
                               background: `linear-gradient(135deg, ${t.colorPreview}, ${t.colorSecondary || t.colorPreview})`,
-                              boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
+                              boxShadow: '0 2px 5px rgba(0,0,0,0.15)',
                               flexShrink: 0,
                             }}
                           />
                           <div>
-                            <div style={{ fontSize: '0.88rem', fontWeight: isSelected ? 700 : 600, color: isSelected ? t.primary : '#1e293b' }}>
+                            <div style={{ fontSize: '0.85rem', fontWeight: isSelected ? 700 : 600, color: isSelected ? t.primary : '#1e293b' }}>
                               {t.name}
                             </div>
-                            <div style={{ fontSize: '0.72rem', color: '#64748b' }}>{t.category}</div>
+                            <div style={{ fontSize: '0.7rem', color: '#64748b' }}>{t.category}</div>
                           </div>
                         </div>
-                        {isSelected && <Check size={16} style={{ color: t.primary, strokeWidth: 2.5 }} />}
+                        {isSelected && <Check size={15} style={{ color: t.primary, strokeWidth: 2.5 }} />}
                       </button>
                     );
                   })}
@@ -290,12 +383,42 @@ export default function Navbar() {
             gap: '1rem',
           }}
         >
-          {/* Mobile Theme Selector Strip */}
+          {/* Mobile Custom Picker Strip */}
           <div style={{ paddingBottom: '12px', borderBottom: '1px solid #f1f5f9' }}>
             <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#64748b', marginBottom: '8px' }}>
-              Select Theme (10 options)
+              Custom Color Builder
             </div>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <input
+                  type="color"
+                  value={customColors.primary}
+                  onChange={(e) => updateCustomColors(e.target.value, customColors.secondary, customColors.isDark)}
+                  style={{ width: '28px', height: '28px', border: 'none', background: 'none', cursor: 'pointer' }}
+                />
+                <span style={{ fontSize: '0.78rem', fontFamily: 'monospace' }}>Primary</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <input
+                  type="color"
+                  value={customColors.secondary}
+                  onChange={(e) => updateCustomColors(customColors.primary, e.target.value, customColors.isDark)}
+                  style={{ width: '28px', height: '28px', border: 'none', background: 'none', cursor: 'pointer' }}
+                />
+                <span style={{ fontSize: '0.78rem', fontFamily: 'monospace' }}>Secondary</span>
+              </div>
+              <button
+                onClick={() => updateCustomColors(customColors.primary, customColors.secondary, !customColors.isDark)}
+                style={{ padding: '4px 8px', fontSize: '0.75rem', borderRadius: '4px', border: '1px solid #cbd5e1' }}
+              >
+                {customColors.isDark ? 'Dark' : 'Light'}
+              </button>
+            </div>
+
+            <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#64748b', marginBottom: '8px', marginTop: '12px' }}>
+              Preset Themes (25 options)
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', maxHeight: '160px', overflowY: 'auto' }}>
               {themesList.map((t) => (
                 <button
                   key={t.id}

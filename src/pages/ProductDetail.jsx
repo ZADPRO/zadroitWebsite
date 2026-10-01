@@ -34,10 +34,10 @@ export default function ProductDetail() {
   };
 
   return (
-    <div style={{ paddingTop: '8rem', paddingBottom: '6rem', background: '#f8fafc' }}>
+    <div style={{ paddingTop: '8rem', paddingBottom: '6rem' }}>
       <div className="container">
         {/* Back Link */}
-        <Link to="/products" style={{ color: '#0284c7', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.95rem', fontWeight: 700, marginBottom: '2rem' }}>
+        <Link to="/products" style={{ color: 'var(--brand-primary, #ea580c)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.95rem', fontWeight: 700, marginBottom: '2rem' }}>
           <ArrowLeft size={18} /> Back to Products List
         </Link>
 
@@ -45,14 +45,14 @@ export default function ProductDetail() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3rem', alignItems: 'center', marginBottom: '4rem' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '1.25rem' }}>
-              <img src={product.logo} alt={product.name} style={{ width: '64px', height: '64px', borderRadius: '16px', objectFit: 'cover', border: '2px solid #0284c7' }} />
+              <img src={product.logo} alt={product.name} style={{ width: '64px', height: '64px', borderRadius: '16px', objectFit: 'cover', border: '2px solid var(--brand-primary, #ea580c)' }} />
               <div>
                 <span className="glass-pill" style={{ fontSize: '0.8rem', padding: '2px 10px' }}>{product.badge}</span>
                 <h1 style={{ fontSize: '2.8rem', fontWeight: 800, color: '#0f172a' }}>{product.name}</h1>
               </div>
             </div>
 
-            <h3 style={{ fontSize: '1.25rem', color: '#0284c7', fontWeight: 600, marginBottom: '1rem' }}>{product.tagline}</h3>
+            <h3 style={{ fontSize: '1.25rem', color: 'var(--brand-primary, #ea580c)', fontWeight: 600, marginBottom: '1rem' }}>{product.tagline}</h3>
             <p style={{ color: '#334155', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '2rem' }}>
               {product.fullDescription}
             </p>
@@ -72,7 +72,7 @@ export default function ProductDetail() {
           </div>
 
           {/* Featured Screenshot */}
-          <div className="glass-panel" style={{ padding: '0.75rem', borderRadius: '24px', background: '#ffffff', border: '1px solid #e2e8f0' }}>
+          <div className="glass-panel" style={{ padding: '0.75rem', borderRadius: '24px' }}>
             <img
               src={selectedImg}
               alt={product.name}
@@ -84,7 +84,7 @@ export default function ProductDetail() {
         {/* Sample Images Gallery */}
         <div style={{ marginBottom: '4rem' }}>
           <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0f172a', marginBottom: '1.25rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Sparkles size={20} color="#0284c7" /> Interface Gallery & Screenshots
+            <Sparkles size={20} style={{ color: 'var(--brand-primary, #ea580c)' }} /> Interface Gallery & Screenshots
           </h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.25rem' }}>
             {product.sampleImages.map((imgUrl, index) => (
@@ -96,8 +96,7 @@ export default function ProductDetail() {
                   padding: '6px',
                   borderRadius: '16px',
                   cursor: 'pointer',
-                  background: '#ffffff',
-                  border: selectedImg === imgUrl ? '3px solid #0284c7' : '1px solid #e2e8f0',
+                  border: selectedImg === imgUrl ? '3px solid var(--brand-primary, #ea580c)' : '1px solid var(--border-color, #e2e8f0)',
                   transition: 'all 0.2s ease',
                 }}
               >
@@ -111,14 +110,14 @@ export default function ProductDetail() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem', marginBottom: '4rem' }}>
           
           {/* Features */}
-          <div className="glass-panel" style={{ padding: '2.5rem', background: '#ffffff', border: '1px solid #e2e8f0' }}>
+          <div className="glass-panel" style={{ padding: '2.5rem' }}>
             <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#0f172a', marginBottom: '1.25rem' }}>
               Core Module Capabilities
             </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {product.features.map((feat, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '0.98rem', color: '#0f172a' }}>
-                  <CheckCircle2 size={18} color="#059669" style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <CheckCircle2 size={18} style={{ color: 'var(--brand-primary, #ea580c)', flexShrink: 0, marginTop: '2px' }} />
                   <span>{feat}</span>
                 </div>
               ))}
@@ -127,26 +126,26 @@ export default function ProductDetail() {
 
           {/* Tech Stack & Customers */}
           <div>
-            <div className="glass-panel" style={{ padding: '2rem', marginBottom: '2rem', background: '#ffffff', border: '1px solid #e2e8f0' }}>
+            <div className="glass-panel" style={{ padding: '2rem', marginBottom: '2rem' }}>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0f172a', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <Layers size={18} color="#0284c7" /> Built With Modern Tech Stack
+                <Layers size={18} style={{ color: 'var(--brand-primary, #ea580c)' }} /> Built With Modern Tech Stack
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {product.techStack.map((tech, idx) => (
-                  <span key={idx} style={{ background: '#e0f2fe', color: '#0369a1', padding: '6px 14px', borderRadius: '8px', fontSize: '0.88rem', fontWeight: 600 }}>
+                  <span key={idx} className="glass-pill" style={{ padding: '6px 14px', borderRadius: '8px', fontSize: '0.88rem', fontWeight: 600 }}>
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
 
-            <div className="glass-panel" style={{ padding: '2rem', background: '#ffffff', border: '1px solid #e2e8f0' }}>
+            <div className="glass-panel" style={{ padding: '2rem' }}>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0f172a', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <Building size={18} color="#059669" /> Trusted By Enterprise Clients
+                <Building size={18} style={{ color: 'var(--brand-primary, #ea580c)' }} /> Trusted By Enterprise Clients
               </h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 {product.customers.map((cust, idx) => (
-                  <div key={idx} style={{ background: '#f8fafc', padding: '10px 14px', borderRadius: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', border: '1px solid #e2e8f0' }}>
+                  <div key={idx} className="glass-panel" style={{ padding: '10px 14px', borderRadius: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <span style={{ fontWeight: 600, color: '#0f172a', fontSize: '0.92rem' }}>{cust.name}</span>
                     <span style={{ fontSize: '0.8rem', color: '#64748b' }}>{cust.location}</span>
                   </div>

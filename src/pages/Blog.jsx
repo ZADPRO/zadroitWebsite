@@ -20,7 +20,7 @@ export default function Blog() {
   return (
     <div>
       {/* 1. HERO BANNER SECTION */}
-      <section style={{ paddingTop: '9rem', paddingBottom: '5rem', position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg, #edf4ff 0%, #f8fafc 100%)' }}>
+      <section className="hero-fullscreen" style={{ paddingTop: '9rem', paddingBottom: '5rem', position: 'relative', overflow: 'hidden' }}>
         <div className="container" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
           <div className="glass-pill" style={{ marginBottom: '1.25rem' }}>
             <Sparkles size={16} /> Insights & Articles
@@ -46,11 +46,11 @@ export default function Blog() {
                   padding: '14px 16px 14px 48px',
                   borderRadius: '14px',
                   background: '#ffffff',
-                  border: '1px solid #cbd5e1',
+                  border: '1.5px solid var(--border-color, #cbd5e1)',
                   color: '#0f172a',
                   fontSize: '1rem',
                   outline: 'none',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.03)',
+                  boxShadow: '0 4px 12px var(--shadow-glow)',
                 }}
               />
             </div>
@@ -60,10 +60,8 @@ export default function Blog() {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
+                  className={selectedCategory === cat ? 'btn-primary' : 'btn-secondary'}
                   style={{
-                    background: selectedCategory === cat ? '#0284c7' : '#ffffff',
-                    color: selectedCategory === cat ? '#ffffff' : '#334155',
-                    border: '1px solid #cbd5e1',
                     padding: '6px 16px',
                     borderRadius: '20px',
                     fontSize: '0.85rem',
@@ -81,7 +79,7 @@ export default function Blog() {
       </section>
 
       {/* 2. BLOG LISTING */}
-      <section className="section-padding" style={{ background: '#ffffff', borderTop: '1px solid #e2e8f0' }}>
+      <section className="section-padding" style={{ borderTop: '1px solid var(--border-color, #e2e8f0)' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
             {filteredBlogs.slice(0, visibleCount).map((blog, idx) => (
@@ -93,12 +91,12 @@ export default function Blog() {
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
                 whileHover={{ y: -6 }}
                 className="glass-panel"
-                style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', background: '#ffffff', border: '1px solid #e2e8f0' }}
+                style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
               >
                 <div>
                   <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
                     <img src={blog.image} alt={blog.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    <span style={{ position: 'absolute', top: '12px', right: '12px', background: 'rgba(255, 255, 255, 0.9)', backdropFilter: 'blur(8px)', color: '#0284c7', padding: '4px 12px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 700 }}>
+                    <span className="glass-pill" style={{ position: 'absolute', top: '12px', right: '12px', padding: '4px 12px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 700 }}>
                       {blog.category}
                     </span>
                   </div>
@@ -120,7 +118,7 @@ export default function Blog() {
                 </div>
 
                 <div style={{ padding: '0 1.75rem 1.75rem 1.75rem' }}>
-                  <Link to={`/blog/${blog.id}`} style={{ color: '#0284c7', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.9rem' }}>
+                  <Link to={`/blog/${blog.id}`} style={{ color: 'var(--brand-primary, #ea580c)', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.9rem' }}>
                     Read Full Article <ChevronRight size={16} />
                   </Link>
                 </div>

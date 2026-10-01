@@ -264,7 +264,7 @@ export default function Home() {
                         marginBottom: '1.25rem',
                       }}
                     >
-                      <ServiceIcon size={26} color="#ea580c" />
+                      <ServiceIcon size={26} color="var(--brand-primary, #ea580c)" />
                     </div>
 
                     <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.75rem' }}>
@@ -277,14 +277,14 @@ export default function Home() {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem' }}>
                       {service.benefits.slice(0, 3).map((benefit, i) => (
                         <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', color: '#334155' }}>
-                          <CheckCircle2 size={14} color="#ea580c" />
+                          <CheckCircle2 size={14} color="var(--brand-primary, #ea580c)" />
                           <span>{benefit}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <Link to={`/services#${service.id}`} style={{ color: '#ea580c', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.9rem' }}>
+                  <Link to={`/services#${service.id}`} style={{ color: 'var(--brand-primary, #ea580c)', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.9rem' }}>
                     Read More & Specifications <ArrowRight size={16} />
                   </Link>
                 </motion.div>

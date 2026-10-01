@@ -18,11 +18,11 @@ export default function BlogDetail() {
   };
 
   return (
-    <div style={{ paddingTop: '8rem', paddingBottom: '6rem', background: '#f8fafc', position: 'relative' }}>
+    <div style={{ paddingTop: '8rem', paddingBottom: '6rem', position: 'relative' }}>
       <div className="container" style={{ maxWidth: '850px' }}>
         {/* Top Navigation & Category Tag Bar */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2rem', flexWrap: 'wrap', gap: '1rem' }}>
-          <Link to="/blog" style={{ color: '#0284c7', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.95rem', fontWeight: 700 }}>
+          <Link to="/blog" style={{ color: 'var(--brand-primary, #ea580c)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.95rem', fontWeight: 700 }}>
             <ArrowLeft size={18} /> Back to All Articles
           </Link>
 
@@ -35,20 +35,20 @@ export default function BlogDetail() {
           {blog.title}
         </h1>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', borderBottom: '1px solid #e2e8f0', paddingBottom: '1.5rem', marginBottom: '2rem', color: '#64748b', fontSize: '0.9rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', borderBottom: '1px solid var(--border-color, #e2e8f0)', paddingBottom: '1.5rem', marginBottom: '2rem', color: '#64748b', fontSize: '0.9rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <User size={16} color="#0284c7" />
+            <User size={16} style={{ color: 'var(--brand-primary, #ea580c)' }} />
             <span style={{ color: '#0f172a', fontWeight: 700 }}>{blog.author}</span> ({blog.authorRole})
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Calendar size={16} /> {blog.date}</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Clock size={16} /> {blog.readTime}</div>
         </div>
 
-        <div className="glass-panel" style={{ padding: '0.5rem', borderRadius: '24px', marginBottom: '2.5rem', background: '#ffffff', border: '1px solid #e2e8f0' }}>
+        <div className="glass-panel" style={{ padding: '0.5rem', borderRadius: '24px', marginBottom: '2.5rem' }}>
           <img src={blog.image} alt={blog.title} style={{ width: '100%', height: '380px', objectFit: 'cover', borderRadius: '18px' }} />
         </div>
 
-        <div className="glass-panel" style={{ padding: '3rem', fontSize: '1.1rem', lineHeight: '1.8', color: '#334155', background: '#ffffff', border: '1px solid #e2e8f0' }}>
+        <div className="glass-panel" style={{ padding: '3rem', fontSize: '1.1rem', lineHeight: '1.8', color: '#334155' }}>
           <p style={{ marginBottom: '1.5rem', fontWeight: 600, color: '#0f172a' }}>
             {blog.excerpt}
           </p>
@@ -59,10 +59,10 @@ export default function BlogDetail() {
             At Zadroit IT Solution, our engineering teams build scalable pipelines and custom interfaces designed specifically to tackle high-throughput data demands. Enterprise modernizations require not only cutting-edge frameworks, but also strict security controls and continuous performance telemetry.
           </p>
 
-          <div style={{ borderTop: '1px solid #e2e8f0', paddingTop: '1.5rem', marginTop: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
+          <div style={{ borderTop: '1px solid var(--border-color, #e2e8f0)', paddingTop: '1.5rem', marginTop: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
             <div style={{ display: 'flex', gap: '8px' }}>
               {blog.tags.map((tag, i) => (
-                <span key={i} style={{ background: '#e0f2fe', color: '#0369a1', padding: '4px 12px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: 600 }}>
+                <span key={i} className="glass-pill" style={{ padding: '4px 12px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: 600 }}>
                   #{tag}
                 </span>
               ))}

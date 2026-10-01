@@ -55,7 +55,7 @@ export default function Products() {
   return (
     <div>
       {/* 1. HERO BANNER SECTION */}
-      <section style={{ paddingTop: '9rem', paddingBottom: '4rem', position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg, #edf4ff 0%, #f8fafc 100%)' }}>
+      <section className="hero-fullscreen" style={{ paddingTop: '9rem', paddingBottom: '4rem', position: 'relative', overflow: 'hidden' }}>
         <div className="container" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
           <div className="glass-pill" style={{ marginBottom: '1.25rem' }}>
             <Sparkles size={16} /> Enterprise Software Products
@@ -73,7 +73,7 @@ export default function Products() {
       {/* 2. FEATURED PRODUCTS AUTO-SCROLL SHOWCASE (FREEZES ON HOVER) */}
       <section
         className="section-padding"
-        style={{ background: '#f8fafc', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}
+        style={{ borderTop: '1px solid var(--border-color, #e2e8f0)', borderBottom: '1px solid var(--border-color, #e2e8f0)' }}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
@@ -81,7 +81,7 @@ export default function Products() {
           {/* Section Header with Top-Right Navigation Arrows */}
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem', gap: '1.5rem' }}>
             <div>
-              <span style={{ fontSize: '0.82rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#0284c7', fontWeight: 800, display: 'block', marginBottom: '0.4rem' }}>
+              <span className="glass-pill" style={{ fontSize: '0.82rem', marginBottom: '0.4rem' }}>
                 Quick Platform Select
               </span>
               <h2 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>
@@ -94,20 +94,17 @@ export default function Products() {
               <button
                 onClick={handlePrev}
                 aria-label="Previous Product"
+                className="carousel-btn"
                 style={{
                   width: '44px',
                   height: '44px',
                   borderRadius: '12px',
-                  background: '#ffffff',
-                  border: '1.5px solid #bae6fd',
-                  color: '#0284c7',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   padding: 0,
                   cursor: 'pointer',
                   transition: 'all 0.25s ease',
-                  boxShadow: '0 4px 12px rgba(2, 132, 199, 0.08)',
                 }}
               >
                 <ChevronLeft size={22} style={{ display: 'block', margin: '0 auto' }} />
@@ -115,20 +112,17 @@ export default function Products() {
               <button
                 onClick={handleNext}
                 aria-label="Next Product"
+                className="btn-primary"
                 style={{
                   width: '44px',
                   height: '44px',
                   borderRadius: '12px',
-                  background: '#0284c7',
-                  border: 'none',
-                  color: '#ffffff',
+                  padding: 0,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  padding: 0,
                   cursor: 'pointer',
                   transition: 'all 0.25s ease',
-                  boxShadow: '0 4px 14px rgba(2, 132, 199, 0.3)',
                 }}
               >
                 <ChevronRight size={22} style={{ display: 'block', margin: '0 auto' }} />
@@ -166,11 +160,9 @@ export default function Products() {
                         flexDirection: 'column',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        background: 'linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%)',
-                        border: '1.5px solid #bae6fd',
+                        border: '1.5px solid var(--border-color, #fed7aa)',
                         borderRadius: '20px',
                         padding: '1.75rem 1.25rem',
-                        boxShadow: '0 6px 20px rgba(2, 132, 199, 0.08)',
                         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                         textAlign: 'center',
                       }}
@@ -182,10 +174,9 @@ export default function Products() {
                           height: '72px',
                           borderRadius: '18px',
                           overflow: 'hidden',
-                          border: '2px solid #bae6fd',
+                          border: '2px solid var(--border-color, #fed7aa)',
                           background: '#ffffff',
                           padding: '5px',
-                          boxShadow: '0 4px 14px rgba(2, 132, 199, 0.12)',
                           marginBottom: '0.85rem',
                           display: 'flex',
                           alignItems: 'center',
@@ -217,7 +208,7 @@ export default function Products() {
                   width: currentIndex === idx ? '28px' : '10px',
                   height: '10px',
                   borderRadius: '5px',
-                  background: currentIndex === idx ? '#0284c7' : '#cbd5e1',
+                  background: currentIndex === idx ? 'var(--brand-primary, #ea580c)' : '#cbd5e1',
                   border: 'none',
                   cursor: 'pointer',
                   transition: 'all 0.3s ease',
@@ -229,7 +220,7 @@ export default function Products() {
       </section>
 
       {/* 3. EXPLORE ALL PLATFORMS FULL CATALOGUE (RESTORED ORIGINAL DETAILED LAYOUT) */}
-      <section className="section-padding" style={{ background: '#ffffff' }}>
+      <section className="section-padding">
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 3.5rem auto' }}>
             <span className="glass-pill" style={{ marginBottom: '1rem' }}>Full Product Directory</span>
@@ -251,7 +242,7 @@ export default function Products() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="glass-panel"
-                style={{ padding: '3rem 2.5rem', borderRadius: '24px', background: '#ffffff', border: '1.5px solid #bae6fd' }}
+                style={{ padding: '3rem 2.5rem', borderRadius: '24px' }}
               >
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
 
@@ -260,12 +251,12 @@ export default function Products() {
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '1rem' }}>
                       <img src={product.logo} alt={product.name} style={{ width: '48px', height: '48px', borderRadius: '12px', objectFit: 'cover' }} />
                       <div>
-                        <span style={{ fontSize: '0.75rem', background: '#e0f2fe', color: '#0369a1', padding: '3px 10px', borderRadius: '6px', fontWeight: 700 }}>{product.badge}</span>
+                        <span className="glass-pill" style={{ fontSize: '0.75rem', padding: '3px 10px', borderRadius: '6px' }}>{product.badge}</span>
                         <h3 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#0f172a', marginTop: '2px' }}>{product.name}</h3>
                       </div>
                     </div>
 
-                    <h4 style={{ fontSize: '1.15rem', color: '#0284c7', fontWeight: 700, marginBottom: '0.75rem' }}>{product.tagline}</h4>
+                    <h4 style={{ fontSize: '1.15rem', color: 'var(--brand-primary, #ea580c)', fontWeight: 700, marginBottom: '0.75rem' }}>{product.tagline}</h4>
                     <p style={{ color: '#334155', fontSize: '1rem', lineHeight: '1.7', marginBottom: '1.5rem' }}>
                       {product.shortDescription}
                     </p>
@@ -273,7 +264,7 @@ export default function Products() {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '1.75rem' }}>
                       {product.features.slice(0, 3).map((feat, fIdx) => (
                         <div key={fIdx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem', color: '#0f172a' }}>
-                          <CheckCircle2 size={18} color="#059669" style={{ flexShrink: 0 }} />
+                          <CheckCircle2 size={18} style={{ color: 'var(--brand-primary, #ea580c)', flexShrink: 0 }} />
                           <span style={{ fontWeight: 600 }}>{feat}</span>
                         </div>
                       ))}
@@ -286,7 +277,7 @@ export default function Products() {
 
                   {/* Image Preview Side */}
                   <div style={{ order: idx % 2 === 0 ? 2 : 1 }}>
-                    <div className="glass-panel" style={{ padding: '0.5rem', borderRadius: '20px', overflow: 'hidden', background: '#f8fafc', border: '1.5px solid #bae6fd', boxShadow: '0 8px 25px rgba(2, 132, 199, 0.1)' }}>
+                    <div className="glass-panel" style={{ padding: '0.5rem', borderRadius: '20px', overflow: 'hidden' }}>
                       <img
                         src={product.sampleImages[0]}
                         alt={product.name}
@@ -303,7 +294,7 @@ export default function Products() {
       </section>
 
       {/* 4. JOIN OUR COMMUNITY SECTION */}
-      <section className="section-padding" style={{ background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
+      <section className="section-padding" style={{ borderTop: '1px solid var(--border-color, #e2e8f0)' }}>
         <div className="container">
           <div
             className="glass-panel"
@@ -311,12 +302,10 @@ export default function Products() {
               padding: '3.5rem 2rem',
               borderRadius: '28px',
               textAlign: 'center',
-              background: 'linear-gradient(135deg, #e0f2fe, #e0e7ff)',
-              border: '1.5px solid #bae6fd',
             }}
           >
-            <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem auto', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
-              <Users size={28} color="#0284c7" />
+            <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem auto', boxShadow: '0 4px 12px var(--shadow-glow)' }}>
+              <Users size={28} style={{ color: 'var(--brand-primary, #ea580c)' }} />
             </div>
             <h2 style={{ fontSize: '2.4rem', fontWeight: 800, marginBottom: '1rem', color: '#0f172a' }}>
               Join Our Growing <span className="gradient-text">Product Community</span>
@@ -326,8 +315,8 @@ export default function Products() {
             </p>
 
             {subSubmitted ? (
-              <div style={{ background: '#ffffff', padding: '1.5rem', borderRadius: '16px', border: '1.5px solid #0284c7', maxWidth: '480px', margin: '0 auto' }}>
-                <CheckCircle2 size={32} color="#059669" style={{ margin: '0 auto 8px auto' }} />
+              <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '16px', maxWidth: '480px', margin: '0 auto' }}>
+                <CheckCircle2 size={32} style={{ color: 'var(--brand-primary, #ea580c)', margin: '0 auto 8px auto' }} />
                 <h4 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>Subscribed Successfully!</h4>
                 <p style={{ color: '#475569', fontSize: '0.9rem', margin: '4px 0 0 0' }}>
                   Thank you for subscribing (<strong>{subEmail}</strong>). You will receive updates directly.
@@ -350,7 +339,7 @@ export default function Products() {
                     padding: '12px 18px',
                     borderRadius: '12px',
                     background: '#ffffff',
-                    border: '1.5px solid #cbd5e1',
+                    border: '1.5px solid var(--border-color, #cbd5e1)',
                     color: '#0f172a',
                     outline: 'none',
                   }}
