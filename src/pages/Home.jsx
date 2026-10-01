@@ -5,6 +5,7 @@ import { ArrowRight, Sparkles, Cpu, ShieldCheck, Database, Cloud, Smartphone, Wo
 import productsData from '../data/products.json';
 import servicesData from '../data/services.json';
 import logoImg from '../assets/logo.png';
+import bannerImg from '../assets/Banner.jpeg';
 import ProductShowcase from '../components/ProductShowcase';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Testimonials from '../components/Testimonials';
@@ -361,27 +362,69 @@ export default function Home() {
       {/* 6. WHAT OUR CLIENTS SAY ABOUT US */}
       <Testimonials />
 
-      {/* CALL TO ACTION BANNER */}
-      <section className="section-padding" style={{ position: 'relative', overflow: 'hidden' }}>
-        <div className="container">
-          <div
-            className="glass-panel"
+      {/* CALL TO ACTION BANNER WITH FULL-WIDTH BACKGROUND IMAGE */}
+      <section
+        style={{
+          position: 'relative',
+          padding: '7rem 0',
+          overflow: 'hidden',
+          backgroundImage: `url(${bannerImg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Dark overlay for text legibility */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.72) 0%, rgba(15, 23, 42, 0.82) 100%)',
+            backdropFilter: 'blur(3px)',
+            zIndex: 1,
+          }}
+        />
+
+        <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: '850px', margin: '0 auto' }}>
+          <span
+            className="glass-pill"
             style={{
-              padding: '4rem 2rem',
-              borderRadius: '32px',
-              textAlign: 'center',
-              background: 'linear-gradient(135deg, #e0f2fe 0%, #e0e7ff 100%)',
-              border: '1px solid #bae6fd',
+              marginBottom: '1.25rem',
+              background: 'rgba(255, 255, 255, 0.18)',
+              borderColor: 'rgba(255, 255, 255, 0.35)',
+              color: '#ffffff',
+              backdropFilter: 'blur(10px)',
+              padding: '6px 16px',
             }}
           >
-            <h2 style={{ fontSize: '2.8rem', fontWeight: 800, marginBottom: '1rem', color: '#0f172a' }}>
-              Let’s Build The Future <span className="gradient-text">Together</span>
-            </h2>
-            <p style={{ color: '#334155', fontSize: '1.15rem', maxWidth: '650px', margin: '0 auto 2rem auto' }}>
-              Transform your business with cutting-edge technology. Partner with Zadroit today.
-            </p>
-            <Link to="/contact" className="btn-primary" style={{ padding: '14px 36px', fontSize: '1.05rem' }}>
+            <Sparkles size={16} /> Partner With ZAdroit
+          </span>
+
+          <h2 style={{ fontSize: '3.2rem', fontWeight: 800, marginBottom: '1.25rem', color: '#ffffff', textShadow: '0 4px 20px rgba(0,0,0,0.5)', lineHeight: 1.15 }}>
+            Let’s Build The Future <span className="gradient-text">Together</span>
+          </h2>
+
+          <p style={{ color: '#f1f5f9', fontSize: '1.25rem', lineHeight: 1.75, maxWidth: '720px', margin: '0 auto 2.5rem auto', textShadow: '0 2px 10px rgba(0,0,0,0.6)' }}>
+            Transform your business with cutting-edge technology, enterprise SAP integration, custom SaaS applications, and 24/7 cloud consulting.
+          </p>
+
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.25rem', flexWrap: 'wrap' }}>
+            <Link to="/contact" className="btn-primary" style={{ padding: '14px 38px', fontSize: '1.05rem', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.4)' }}>
               Contact Our Engineers <ArrowRight size={20} />
+            </Link>
+            <Link
+              to="/services"
+              className="btn-secondary"
+              style={{
+                padding: '14px 32px',
+                fontSize: '1.05rem',
+                background: 'rgba(255, 255, 255, 0.15)',
+                color: '#ffffff',
+                borderColor: 'rgba(255, 255, 255, 0.4)',
+                backdropFilter: 'blur(10px)',
+              }}
+            >
+              Explore Services
             </Link>
           </div>
         </div>
