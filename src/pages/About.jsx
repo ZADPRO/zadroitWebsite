@@ -5,25 +5,25 @@ import { Sparkles, Target, Eye } from 'lucide-react';
 export default function About() {
   const teamMembers = [
     {
-      name: 'Prakash',
+      name: 'XYZ',
       role: 'Founder & Managing Director',
       bio: 'Visionary technology leader with over 12 years of experience in enterprise software, SAP integration, and digital transformation.',
       image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
     },
     {
-      name: 'Vijay Loganathan',
+      name: 'XYZ',
       role: 'Head of Artificial Intelligence',
       bio: 'Specialist in machine learning models, predictive health algorithms, and natural language processing pipelines.',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
     },
     {
-      name: 'Priya Sundaram',
+      name: 'XYZ',
       role: 'Lead Cloud Architect',
       bio: 'AWS & Azure certified architect managing Kubernetes clusters, CI/CD pipelines, and zero-trust cybersecurity.',
       image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
     },
     {
-      name: 'Karthik Subramanian',
+      name: 'XYZ',
       role: 'FinTech Software Principal',
       bio: 'Lead architect behind ZAdPro MicroFin and Express Logistics ERP modules with real-time payment integrations.',
       image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',

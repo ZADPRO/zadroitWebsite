@@ -337,7 +337,7 @@ export default function Contact() {
       <section className="section-padding" style={{ background: '#ffffff', borderTop: '1px solid #e2e8f0' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3rem', alignItems: 'start' }}>
-            
+
             {/* Contact Info Cards */}
             <div>
               <h2 style={{ fontSize: '2.2rem', fontWeight: 800, marginBottom: '1.5rem', color: '#0f172a' }}>
@@ -437,7 +437,7 @@ export default function Contact() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="john@company.com"
+                        placeholder="xyz@company.com"
                         style={{
                           width: '100%',
                           padding: '12px 16px',
@@ -456,7 +456,7 @@ export default function Contact() {
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 XXXXX XXXXX"
                         style={{
                           width: '100%',
                           padding: '12px 16px',
@@ -547,7 +547,7 @@ export default function Contact() {
                   </div>
 
                   <button type="submit" disabled={sending} className="btn-primary" style={{ padding: '14px', marginTop: '0.5rem', opacity: sending ? 0.7 : 1 }}>
-                    {sending ? 'Sending Email...' : `Send Email to ${emailConfig.receiveEmailId}`} <Send size={18} />
+                    {sending ? 'Sending Email...' : `Send a message to zadroit`} <Send size={18} />
                   </button>
                 </form>
               )}
