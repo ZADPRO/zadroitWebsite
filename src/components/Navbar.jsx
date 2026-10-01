@@ -79,9 +79,9 @@ export default function Navbar() {
                       bottom: 0,
                       left: 0,
                       right: 0,
-                      height: '2px',
+                      height: '3px',
                       borderRadius: '2px',
-                      background: 'linear-gradient(90deg, #0284c7, #eab308)',
+                      background: 'linear-gradient(90deg, #2C69D1, #0ABCF9)',
                     }}
                   />
                 )}

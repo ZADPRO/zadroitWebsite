@@ -1,92 +1,332 @@
 [
   {
-    "id": "oracle-software-solution",
-    "title": "Oracle Software Solutions",
-    "icon": "Database",
-    "shortDesc": "Custom ERP, CRM, and business process automation built on robust Oracle platforms.",
-    "fullDesc": "Empower your business with tailored Oracle ERP, NetSuite, and E-Business Suite implementations. We customize, integrate, and optimize Oracle business applications to automate core processes, streamline finance, and improve supply chain visibility.",
-    "benefits": [
-      "Custom ERP & CRM workflow automation",
-      "Database tuning & performance optimization",
-      "Seamless migration to Oracle Cloud Infrastructure (OCI)",
-      "Financial, Inventory, & HR module integration"
+    "id": "cybersecurity-services",
+    "slugs": ["cybersecurity-services", "cybersecurity"],
+    "title": "Cybersecurity Services",
+    "tagline": "Advanced Threat Protection, Penetration Testing & Enterprise Compliance",
+    "icon": "ShieldCheck",
+    "shortDesc": "Protect your business from ever-evolving cyber threats with our comprehensive cybersecurity services. We offer security audits, threat detection, and data protection solutions to safeguard your sensitive information and ensure compliance with industry standards.",
+    "fullDesc": "Protect your business from ever-evolving cyber threats with our comprehensive cybersecurity services. We offer security audits, threat detection, and data protection solutions to safeguard your sensitive information and ensure compliance with industry standards.",
+    "heroDesc": "Protect your digital assets, infrastructure, and enterprise data with Zadroit's multi-layered cybersecurity services. We provide continuous threat monitoring, penetration testing, compliance management, and rapid incident response.",
+    "overview": "In today's digital landscape, cyber threats are growing more sophisticated. Zadroit provides end-to-end cybersecurity solutions engineered to defend your organization against ransomware, data breaches, and zero-day vulnerabilities. Our certified security experts audit your IT environment, patch vulnerabilities, and establish robust defense frameworks compliant with international standards.",
+    "capabilities": [
+      {
+        "title": "Vulnerability Assessment & Penetration Testing (VAPT)",
+        "desc": "Simulating real-world cyberattacks to identify and remediate security gaps in your web applications, mobile apps, and cloud networks before malicious actors exploit them."
+      },
+      {
+        "title": "24/7 SOC Threat Monitoring & Incident Response",
+        "desc": "Real-time threat detection and continuous SIEM monitoring to neutralize security incidents immediately and maintain zero business disruption."
+      },
+      {
+        "title": "Regulatory Compliance & Audit Preparedness",
+        "desc": "Ensuring your enterprise meets strict regulatory standards including ISO 27001, GDPR, HIPAA, and PCI-DSS through comprehensive security governance."
+      },
+      {
+        "title": "Network & Cloud Security Hardening",
+        "desc": "Deploying web application firewalls (WAF), zero-trust architecture, multi-factor authentication (MFA), and automated encryption protocols across cloud workloads."
+      }
     ],
-    "deliverables": ["Custom Oracle Module", "Database Schema Optimization", "24/7 Managed Oracle Support"],
-    "techStack": ["Oracle Database 19c/23c", "Oracle PL/SQL", "Oracle APEX", "OCI", "Java Enterprise"]
-  },
-  {
-    "id": "sap-integration",
-    "title": "SAP Integration",
-    "icon": "Workflow",
-    "shortDesc": "Seamlessly connect SAP S/4HANA & ECC with your enterprise systems for real-time automation.",
-    "fullDesc": "Bridge the gap between your SAP core and peripheral web, mobile, and third-party SaaS applications. Our SAP Integration experts utilize SAP CPI (Cloud Integration), RFC, and OData services to ensure real-time data synchronization.",
-    "benefits": [
-      "Bi-directional SAP S/4HANA OData & REST API integration",
-      "Automated order-to-cash & procure-to-pay pipelines",
-      "Real-time SAP inventory & master data sync",
-      "Reduced manual data entry & zero data loss"
+    "process": [
+      { "step": "01", "title": "Discovery & Risk Assessment", "desc": "Auditing existing infrastructure, assets, and data flows to map security risks and compliance gaps." },
+      { "step": "02", "title": "Security Architecture Design", "desc": "Designing a tailored zero-trust security architecture, access controls, and firewall rules." },
+      { "step": "03", "title": "Implementation & Hardening", "desc": "Deploying VAPT patches, SOC monitoring tools, encryption keys, and security software." },
+      { "step": "04", "title": "Continuous Defense & Support", "desc": "Providing round-the-clock threat monitoring, vulnerability patching, and security awareness training." }
     ],
-    "deliverables": ["SAP CPI Integration Pipelines", "Custom ABAP OData Services", "Middleware Architecture"],
-    "techStack": ["SAP S/4HANA", "SAP CPI", "ABAP", "SAP Fiori", "REST/OData API"]
-  },
-  {
-    "id": "web-mobile-app-development",
-    "title": "Web & Mobile App Development",
-    "icon": "Smartphone",
-    "shortDesc": "Designing high-performance responsive web applications and native/cross-platform mobile apps.",
-    "fullDesc": "We engineer visually stunning, ultra-fast web apps and mobile applications tailored for iOS and Android. From consumer-facing React web platforms to feature-rich React Native mobile applications, we transform user experience into business growth.",
     "benefits": [
-      "Pixel-perfect responsive UX/UI design",
-      "Cross-platform iOS & Android mobile apps",
-      "Progressive Web App (PWA) capabilities",
-      "Blazing fast performance & high SEO optimization"
+      "Zero-downtime protection against ransomware and phishing attacks",
+      "Full compliance with ISO 27001, GDPR, HIPAA, and industry regulations",
+      "Detailed VAPT audit reports with actionable remediation steps",
+      "24/7 security operations center (SOC) monitoring and rapid SLA response"
     ],
-    "deliverables": ["Production Web Portal", "iOS & Android Mobile App", "RESTful API Backend", "Admin Dashboard"],
-    "techStack": ["React", "React Native", "Node.js", "TypeScript", "Tailwind CSS/Vanilla CSS", "Vite"]
+    "faqs": [
+      {
+        "q": "Why is VAPT essential for my business?",
+        "a": "Vulnerability Assessment and Penetration Testing (VAPT) proactively identifies security flaws in your code and infrastructure, preventing costly data breaches and reputational damage."
+      },
+      {
+        "q": "How quickly can Zadroit respond to a security incident?",
+        "a": "Our 24/7 Security Operations team operates under guaranteed SLA response times, initiating threat containment within minutes of anomaly detection."
+      },
+      {
+        "q": "Does Zadroit assist with HIPAA & GDPR compliance?",
+        "a": "Yes, our certified compliance consultants audit your data pipelines, implement required encryption, and provide full audit documentation."
+      }
+    ]
   },
   {
     "id": "cloud-computing-solutions",
+    "slugs": ["cloud-computing-solutions", "cloud-computing"],
     "title": "Cloud Computing Solutions",
+    "tagline": "Scalable Cloud Architecture, Migration & DevOps Infrastructure Automation",
     "icon": "Cloud",
-    "shortDesc": "Cloud migration, infrastructure deployment, DevOps automation, and 99.99% uptime management.",
-    "fullDesc": "Migrate, scale, and optimize your IT infrastructure with our cloud computing expertise. We specialize in AWS, Azure, and Google Cloud, helping you automate CI/CD pipelines, lower cloud spending, and ensure disaster recovery.",
-    "benefits": [
-      "Zero-downtime legacy to cloud migration",
-      "Kubernetes & Docker container orchestration",
-      "Infrastructure as Code (Terraform / CloudFormation)",
-      "Continuous Monitoring & Automated Security Backups"
+    "shortDesc": "Embrace the full power and flexibility of the cloud with our seamless migration, deployment, and management services. Scale operations, enhance security, and optimize costs for maximum uptime and performance.",
+    "fullDesc": "Embrace the full power and flexibility of the cloud with our seamless migration, deployment, and management services. Scale operations, enhance security, and optimize costs for maximum uptime and performance.",
+    "heroDesc": "Embrace the power of the cloud with our seamless cloud migration, deployment, and infrastructure management services. We transition legacy workloads to secure, scalable, and cost-effective cloud environments on AWS, Azure, and OCI.",
+    "overview": "Cloud computing is the backbone of digital transformation. Zadroit helps enterprises replace legacy physical hardware with agile, high-performance cloud infrastructure. Whether you need public, private, or hybrid cloud architecture, our certified cloud engineers build automated CI/CD pipelines, containerized microservices, and disaster recovery strategies.",
+    "capabilities": [
+      {
+        "title": "Cloud Migration & Workload Transition",
+        "desc": "Seamless, zero-downtime rehosting and re-architecting of enterprise applications from on-premise servers to AWS, Microsoft Azure, and Oracle Cloud Infrastructure."
+      },
+      {
+        "title": "DevOps & Infrastructure as Code (IaC)",
+        "desc": "Automating server provisioning, CI/CD deployment pipelines, and environment management using Terraform, Ansible, and Docker."
+      },
+      {
+        "title": "Kubernetes & Microservices Orchestration",
+        "desc": "Containerizing monoliths into scalable microservices managed by Kubernetes for dynamic autoscaling and high availability."
+      },
+      {
+        "title": "Cloud Cost Optimization & FinOps",
+        "desc": "Analyzing cloud spending, eliminating idle resource waste, and configuring reserved instances to reduce monthly cloud costs by up to 40%."
+      }
     ],
-    "deliverables": ["Cloud Architecture Plan", "CI/CD Deployment Pipelines", "Cloud Cost Optimization Audit"],
-    "techStack": ["AWS", "Microsoft Azure", "Google Cloud Platform", "Docker", "Kubernetes", "Terraform"]
+    "process": [
+      { "step": "01", "title": "Infrastructure Audit", "desc": "Evaluating legacy workloads, dependency mapping, and business SLA requirements." },
+      { "step": "02", "title": "Cloud Blueprint Design", "desc": "Architecting resilient multi-cloud network topologies, security groups, and storage policies." },
+      { "step": "03", "title": "Migration & Pipeline Setup", "desc": "Executing data migration and establishing automated CI/CD deployment channels." },
+      { "step": "04", "title": "Optimization & Managed Cloud", "desc": "Continuous performance tuning, autoscaling configuration, and 24/7 cloud monitoring." }
+    ],
+    "benefits": [
+      "Cost-effective and dynamically scalable cloud IT infrastructure",
+      "99.99% SLA uptime guarantee with automated disaster recovery",
+      "Improved business agility and frictionless remote access worldwide",
+      "Enterprise-grade security controls and automated cloud data backups"
+    ],
+    "faqs": [
+      {
+        "q": "Which cloud providers does Zadroit support?",
+        "a": "We specialize in AWS, Microsoft Azure, Google Cloud Platform (GCP), and Oracle Cloud Infrastructure (OCI)."
+      },
+      {
+        "q": "Will my business experience downtime during cloud migration?",
+        "a": "No, we use phased blue-green migration strategies and live database synchronization to ensure zero operational downtime."
+      },
+      {
+        "q": "Can Zadroit help reduce our existing AWS/Azure monthly bill?",
+        "a": "Yes, our FinOps audits optimize resource allocation, container density, and reserved instance purchasing to significantly cut cloud expenses."
+      }
+    ]
+  },
+  {
+    "id": "web-mobile-app-development",
+    "slugs": ["web-mobile-app-development", "web-mobile-app"],
+    "title": "Web & Mobile App Development",
+    "tagline": "Custom High-Performance Web Portals & Native Cross-Platform Mobile Applications",
+    "icon": "Smartphone",
+    "shortDesc": "We specialize in designing responsive websites and mobile apps for iOS and Android. Our team delivers high-performance solutions tailored to both customer-facing and internal business needs.",
+    "fullDesc": "We specialize in designing responsive websites and mobile apps for iOS and Android. Our team delivers high-performance solutions tailored to both customer-facing and internal business needs.",
+    "heroDesc": "Engage your customers with intuitive, lightning-fast web and mobile applications tailored for iOS and Android. We build responsive web portals, progressive web apps (PWA), and scalable microservices backends.",
+    "overview": "A compelling digital application is central to modern customer growth. Zadroit delivers end-to-end web and mobile software development using cutting-edge frameworks like React, React Native, Node.js, and Vite. From enterprise SaaS platforms to consumer mobile apps, we craft intuitive UI/UX paired with robust, high-throughput cloud backends.",
+    "capabilities": [
+      {
+        "title": "Custom Web Application Engineering",
+        "desc": "Building dynamic, highly responsive web portals and SaaS platforms using modern React, Vue, and TypeScript architecture."
+      },
+      {
+        "title": "Cross-Platform Mobile Apps (iOS & Android)",
+        "desc": "Developing native-quality mobile applications with React Native and Flutter, reducing time-to-market and development costs."
+      },
+      {
+        "title": "UX/UI Design & Prototyping",
+        "desc": "Designing user-centered interface mockups, interactive wireframes, and design systems focused on conversion and retention."
+      },
+      {
+        "title": "API Backend & Microservices Architecture",
+        "desc": "Engineering secure RESTful and GraphQL APIs backed by Node.js, Python, and scalable SQL/NoSQL databases."
+      }
+    ],
+    "process": [
+      { "step": "01", "title": "Discovery & Feature Scope", "desc": "Defining target audience personas, user journeys, functional requirements, and tech stack." },
+      { "step": "02", "title": "UI/UX & System Design", "desc": "Crafting interactive Figma prototypes and designing scalable database architecture." },
+      { "step": "03", "title": "Agile Sprint Development", "desc": "Building app features in transparent 2-week iterations with continuous QA testing." },
+      { "step": "04", "title": "App Store Launch & Support", "desc": "Deploying apps to Apple App Store & Google Play, followed by SLA maintenance." }
+    ],
+    "benefits": [
+      "User-friendly, intuitive interface designed for peak engagement",
+      "Scalable backend architecture capable of handling millions of requests",
+      "Seamless cross-platform performance across web, iOS, and Android",
+      "High SEO optimization, rapid page loading speeds, and accessibility compliance"
+    ],
+    "faqs": [
+      {
+        "q": "Do you develop for both iOS and Android simultaneously?",
+        "a": "Yes, using modern cross-platform technologies like React Native, we deploy to both Apple App Store and Google Play with a single unified codebase."
+      },
+      {
+        "q": "Will I own the source code after development?",
+        "a": "Absolutely. You retain 100% full intellectual property rights and complete access to all source code repositories upon project completion."
+      },
+      {
+        "q": "What post-launch support does Zadroit offer?",
+        "a": "We offer structured SLA maintenance plans covering version updates, bug fixes, performance monitoring, and new feature rollouts."
+      }
+    ]
+  },
+  {
+    "id": "oracle-software-solution",
+    "slugs": ["oracle-software-solution", "oracle-software"],
+    "title": "Oracle Software Solutions",
+    "tagline": "Oracle ERP Cloud Implementation, Migration, Custom APEX & Database Services",
+    "icon": "Database",
+    "shortDesc": "Unlock your enterprise’s potential with our Oracle Software Solutions, offering robust ERP, database management, and cloud applications for efficiency, scalability, and security. Tailored to your business needs.",
+    "fullDesc": "Unlock your enterprise’s potential with our Oracle Software Solutions, offering robust ERP, database management, and cloud applications for efficiency, scalability, and security. Tailored to your business needs.",
+    "heroDesc": "Streamline enterprise operations with tailored Oracle ERP, NetSuite, and E-Business Suite software solutions. We automate finance, supply chain, HR, and custom database workflows for global businesses.",
+    "overview": "Oracle ERP provides an enterprise-grade cloud foundation that unifies core business operations—from financial reporting and inventory management to human resources and CRM. Zadroit specializes in Oracle ERP deployment, seamless migration from legacy platforms, custom Oracle APEX module development, and 24/7 database administration.",
+    "capabilities": [
+      {
+        "title": "Oracle ERP Implementation & Customization",
+        "desc": "End-to-end configuration and custom module creation for Oracle Financials, Supply Chain Management (SCM), and HCM."
+      },
+      {
+        "title": "Database Migration & Version Upgrades",
+        "desc": "Smooth migration from legacy databases to Oracle 19c/23c and Autonomous Database on Oracle Cloud Infrastructure (OCI)."
+      },
+      {
+        "title": "Oracle APEX & Low-Code Web Apps",
+        "desc": "Rapidly developing secure custom web interfaces and internal workflow utilities built directly on top of Oracle databases."
+      },
+      {
+        "title": "24/7 Oracle DBA Support & Optimization",
+        "desc": "Proactive database performance tuning, PL/SQL query optimization, backup strategies, and patch management."
+      }
+    ],
+    "process": [
+      { "step": "01", "title": "Business Process Audit", "desc": "Mapping current financial and supply chain workflows to Oracle ERP standards." },
+      { "step": "02", "title": "System Design & Customization", "desc": "Configuring Oracle modules and designing custom PL/SQL integration adapters." },
+      { "step": "03", "title": "Data Migration & Validation", "desc": "Extracting, cleansing, and loading legacy master data into Oracle environments." },
+      { "step": "04", "title": "Go-Live & Post-Launch Support", "desc": "Executing seamless cutover, staff training, and round-the-clock DBA maintenance." }
+    ],
+    "benefits": [
+      "Real-time operational data insights and executive reporting",
+      "Automated financial reconciliation and supply chain tracking",
+      "Reduced manual data entry errors across enterprise departments",
+      "Seamless integration between Oracle ERP and third-party SaaS applications"
+    ],
+    "faqs": [
+      {
+        "q": "Can you migrate our legacy database to Oracle Cloud (OCI)?",
+        "a": "Yes, we specialize in migrating complex legacy databases to Oracle Cloud Infrastructure (OCI) with zero data loss."
+      },
+      {
+        "q": "What is Oracle APEX and how can it benefit my company?",
+        "a": "Oracle APEX is a high-productivity low-code framework that allows us to build web applications over your Oracle Database up to 20x faster."
+      },
+      {
+        "q": "Do you provide ongoing Oracle DBA management?",
+        "a": "Yes, our certified Oracle DBAs provide 24/7 monitoring, automated backups, performance tuning, and patch management."
+      }
+    ]
+  },
+  {
+    "id": "sap-integration",
+    "slugs": ["sap-integration", "sap-integration"],
+    "title": "SAP Integration",
+    "tagline": "Real-Time SAP S/4HANA & ECC Integration, OData APIs & Middleware Connectors",
+    "icon": "Workflow",
+    "shortDesc": "Our Technology Consulting service offers expert advice on strategy, system assessments, and tailored solutions. We help optimize your technology to align with your business goals and drive success.",
+    "fullDesc": "Our Technology Consulting service offers expert advice on strategy, system assessments, and tailored solutions. We help optimize your technology to align with your business goals and drive success.",
+    "heroDesc": "Bridge the gap between your core SAP infrastructure and external systems. Our SAP integration experts connect SAP S/4HANA with e-commerce, web portals, mobile apps, and custom microservices.",
+    "overview": "Integrating SAP with your enterprise software landscape enables real-time data synchronization, automated order processing, and unified business visibility. Zadroit builds robust SAP CPI (Cloud Integration), ABAP OData APIs, and middleware connectors that eliminate data silos between SAP S/4HANA/ECC and external web/mobile applications.",
+    "capabilities": [
+      {
+        "title": "SAP CPI & Cloud Integration",
+        "desc": "Connecting SAP S/4HANA Cloud and ECC with Salesforce, ServiceNow, custom portals, and cloud microservices."
+      },
+      {
+        "title": "Custom ABAP & OData API Development",
+        "desc": "Building high-speed RESTful OData services and RFC function modules for secure bi-directional SAP data exchange."
+      },
+      {
+        "title": "SAP Fiori & User Experience Modernization",
+        "desc": "Creating intuitive web and mobile SAP Fiori interfaces for field operators, warehouse staff, and executives."
+      },
+      {
+        "title": "Real-Time Master Data & Inventory Sync",
+        "desc": "Automating order-to-cash, procure-to-pay, and customer master data pipelines with zero latency."
+      }
+    ],
+    "process": [
+      { "step": "01", "title": "Architecture Mapping", "desc": "Analyzing SAP data structures, RFC endpoints, and third-party API requirements." },
+      { "step": "02", "title": "Middleware & OData Setup", "desc": "Configuring SAP CPI integration flows and developing custom ABAP endpoints." },
+      { "step": "03", "title": "End-to-End Testing", "desc": "Validating bi-directional data flow, error handling, and payload security under heavy load." },
+      { "step": "04", "title": "Deployment & Monitoring", "desc": "Deploying integration pipelines into production with automated exception alerting." }
+    ],
+    "benefits": [
+      "Smooth, automated data synchronization between SAP and external apps",
+      "Elimination of double data entry and operational bottlenecks",
+      "Real-time visibility into inventory, order status, and financial metrics",
+      "Enhanced security compliance matching SAP strict authorization roles"
+    ],
+    "faqs": [
+      {
+        "q": "Which SAP versions do you support for integration?",
+        "a": "We support SAP S/4HANA (Cloud & On-Premise), SAP ECC 6.0, SAP Business One, and SAP BTP."
+      },
+      {
+        "q": "What middleware do you use for SAP connectivity?",
+        "a": "We primarily utilize SAP CPI (Cloud Platform Integration), MuleSoft, Dell Boomi, and custom Node.js/Python microservice bridges."
+      },
+      {
+        "q": "Can we connect our custom web mobile app to SAP?",
+        "a": "Yes, we expose custom OData and REST APIs from SAP, allowing your web and mobile applications to read and write SAP data securely in real time."
+      }
+    ]
   },
   {
     "id": "ai-machine-learning-development",
+    "slugs": ["ai-machine-learning-development", "ai-machine-learning"],
     "title": "AI & Machine Learning Development",
+    "tagline": "Custom AI Automation, Predictive Analytics, Natural Language Processing & Computer Vision",
     "icon": "Cpu",
-    "shortDesc": "Harness intelligent automation, predictive analytics, NLP, and computer vision solutions.",
-    "fullDesc": "Transform raw business data into actionable intelligence. We build custom machine learning models, predictive forecasting tools, automated chatbots, and computer vision applications that reduce manual overhead and boost decision accuracy.",
-    "benefits": [
-      "Predictive analytics for demand forecasting & risk",
-      "Custom LLM & RAG Chatbot Integration",
-      "Automated document extraction & OCR",
-      "Real-time anomaly detection & fraud monitoring"
+    "shortDesc": "Harness AI and machine learning for smart automation, predictive analytics, and data-driven decisions to boost productivity and innovation. Boost efficiency and innovation with AI-driven automation and predictive insights",
+    "fullDesc": "Harness AI and machine learning for smart automation, predictive analytics, and data-driven decisions to boost productivity and innovation. Boost efficiency and innovation with AI-driven automation and predictive insights",
+    "heroDesc": "Harness the power of artificial intelligence (AI) and machine learning (ML) to automate complex tasks, predict business trends, and deliver hyper-personalized user experiences.",
+    "overview": "Artificial intelligence is reshaping competitive business. Zadroit designs, trains, and deploys production-grade AI algorithms, Large Language Model (LLM) agents, computer vision systems, and predictive analytics pipelines. We transform unstructured enterprise data into intelligent, automated workflows that increase operating margins.",
+    "capabilities": [
+      {
+        "title": "Predictive Analytics & Forecasting",
+        "desc": "Training custom ML models to forecast sales demand, customer churn, financial risk, and equipment maintenance."
+      },
+      {
+        "title": "Enterprise LLM & RAG Chatbot Agents",
+        "desc": "Building intelligent internal knowledge assistants and customer support bots integrated with OpenAI, Claude, and local open-source models."
+      },
+      {
+        "title": "Computer Vision & Automated OCR",
+        "desc": "Extracting data automatically from invoices, receipts, and identity documents, as well as real-time video stream analysis."
+      },
+      {
+        "title": "Intelligent Process Automation (IPA)",
+        "desc": "Embedding AI decision models into existing enterprise web and mobile applications to automate repetitive manual tasks."
+      }
     ],
-    "deliverables": ["Custom ML Model Endpoint", "Data Pipeline", "AI Dashboard Integration"],
-    "techStack": ["Python", "TensorFlow", "PyTorch", "Scikit-Learn", "OpenAI API", "FastAPI"]
-  },
-  {
-    "id": "cybersecurity-services",
-    "title": "Cybersecurity Services",
-    "icon": "ShieldCheck",
-    "shortDesc": "Comprehensive security audits, threat detection, penetration testing, and data protection.",
-    "fullDesc": "Protect your enterprise against cyber vulnerabilities and compliance penalties. Our certified security professionals conduct penetration testing, vulnerability assessments, SOC monitoring, and end-to-end data encryption.",
-    "benefits": [
-      "Penetration testing & vulnerability assessment (VAPT)",
-      "GDPR, ISO 27001, & HIPAA compliance readiness",
-      "24/7 Security Threat Detection & Incident Response",
-      "Employee Security Awareness & Phishing Defense"
+    "process": [
+      { "step": "01", "title": "Data Audit & Feasibility", "desc": "Evaluating client dataset quality, labeling requirements, and AI objective metrics." },
+      { "step": "02", "title": "Model Training & Tuning", "desc": "Selecting neural network architectures, feature engineering, and model validation." },
+      { "step": "03", "title": "API Endpoint Integration", "desc": "Deploying models as scalable REST microservices integrated with your web/mobile apps." },
+      { "step": "04", "title": "Continuous Learning & MLOps", "desc": "Monitoring model drift, automated retraining pipelines, and accuracy optimization." }
     ],
-    "deliverables": ["VAPT Security Audit Report", "Remediation Patching", "Compliance Readiness Certificate"],
-    "techStack": ["Wireshark", "Metasploit", "Burp Suite", "Kali Linux", "Cloudflare Security", "SIEM"]
+    "benefits": [
+      "Data-driven decision making powered by predictive machine learning insights",
+      "Drastic reduction in manual document processing times through AI OCR",
+      "Enhanced customer satisfaction with 24/7 intelligent conversational bots",
+      "Scalable MLOps architecture ensuring high accuracy and zero model degradation"
+    ],
+    "faqs": [
+      {
+        "q": "How does Zadroit handle data privacy during AI model training?",
+        "a": "We prioritize strict privacy; your proprietary data is never used to train public models. We deploy isolated, secure VPC pipelines or on-premise AI models."
+      },
+      {
+        "q": "Can AI be integrated into our existing React web app or backend?",
+        "a": "Yes, we wrap AI models in lightweight, high-performance REST/gRPC API endpoints that integrate seamlessly with any existing tech stack."
+      },
+      {
+        "q": "What AI frameworks do your developers use?",
+        "a": "We use Python, PyTorch, TensorFlow, Scikit-Learn, OpenCV, LangChain, LlamaIndex, and FastAPI."
+      }
+    ]
   }
 ]

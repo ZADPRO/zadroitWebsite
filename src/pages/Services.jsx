@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import { Sparkles, Database, Workflow, Smartphone, Cloud, Cpu, ShieldCheck, CheckCircle2, ArrowRight, Layers } from 'lucide-react';
+import { Sparkles, Database, Workflow, Smartphone, Cloud, Cpu, ShieldCheck, ArrowRight } from 'lucide-react';
 import servicesData from '../data/services.json';
 import ApproachMap from '../components/ApproachMap';
 
@@ -49,7 +49,7 @@ export default function Services() {
             </h2>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+          <div className="services-2col-grid">
             {servicesData.map((service) => {
               const iconsMap = {
                 Database: Database,
@@ -66,70 +66,56 @@ export default function Services() {
                   key={service.id}
                   id={service.id}
                   className="glass-panel"
-                  style={{ padding: '3rem 2.5rem', borderRadius: '24px', background: '#ffffff', border: '1px solid #e2e8f0' }}
+                  style={{
+                    padding: '2.25rem 2rem',
+                    borderRadius: '24px',
+                    background: '#ffffff',
+                    border: '1.5px solid #bae6fd',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                  }}
                 >
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2.5rem', alignItems: 'center' }}>
-                    <div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '1.25rem' }}>
-                        <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'linear-gradient(135deg, #0284c7, #06b6d4)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                          <ServiceIcon size={24} color="#ffffff" />
-                        </div>
-                        <h3 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#0f172a' }}>
-                          {service.title}
-                        </h3>
+                  <div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '1.25rem' }}>
+                      <div style={{ width: '48px', height: '48px', borderRadius: '14px', background: 'linear-gradient(135deg, #0284c7, #06b6d4)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        <ServiceIcon size={24} color="#ffffff" />
                       </div>
-
-                      <p style={{ color: '#334155', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '1.5rem' }}>
-                        {service.fullDesc}
-                      </p>
-
-                      <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#0284c7', marginBottom: '0.75rem' }}>Key Service Benefits:</h4>
-                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.75rem', marginBottom: '1.5rem' }}>
-                        {service.benefits.map((benefit, bIdx) => (
-                          <div key={bIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', fontSize: '0.9rem', color: '#0f172a' }}>
-                            <CheckCircle2 size={16} color="#059669" style={{ flexShrink: 0, marginTop: '2px' }} />
-                            <span>{benefit}</span>
-                          </div>
-                        ))}
-                      </div>
-
-                      <Link to="/contact" className="btn-primary" style={{ fontSize: '0.9rem', padding: '10px 22px' }}>
-                        Inquire About {service.title} <ArrowRight size={16} />
-                      </Link>
+                      <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#0f172a' }}>
+                        {service.title}
+                      </h3>
                     </div>
 
-                    <div style={{ background: '#f8fafc', padding: '2rem', borderRadius: '18px', border: '1px solid #e2e8f0' }}>
-                      <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#0f172a', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                        <Layers size={18} color="#0284c7" /> Technology & Deliverables
-                      </h4>
-                      
-                      <div style={{ marginBottom: '1.5rem' }}>
-                        <span style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#64748b', display: 'block', marginBottom: '0.5rem' }}>Tech Stack</span>
-                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                          {service.techStack.map((tech, tIdx) => (
-                            <span key={tIdx} style={{ background: '#e0f2fe', color: '#0369a1', padding: '4px 10px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: 600 }}>
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
+                    <p style={{ color: '#334155', fontSize: '1.02rem', lineHeight: '1.7', marginBottom: '1.75rem' }}>
+                      {service.fullDesc}
+                    </p>
+                  </div>
 
-                      <div>
-                        <span style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#64748b', display: 'block', marginBottom: '0.5rem' }}>Core Deliverables</span>
-                        <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '6px', fontSize: '0.88rem', color: '#334155' }}>
-                          {service.deliverables.map((deliv, dIdx) => (
-                            <li key={dIdx} style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                              ● {deliv}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.85rem', borderTop: '1px solid #f1f5f9', paddingTop: '1.25rem' }}>
+                    <Link to={`/services/${service.id}`} className="btn-primary" style={{ fontSize: '0.9rem', padding: '10px 20px', display: 'inline-flex' }}>
+                      Know More & Specifications <ArrowRight size={16} />
+                    </Link>
+                    <Link to="/contact" className="btn-secondary" style={{ fontSize: '0.9rem', padding: '10px 18px', display: 'inline-flex' }}>
+                      Inquire Now
+                    </Link>
                   </div>
                 </div>
               );
             })}
           </div>
+
+          <style>{`
+            .services-2col-grid {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 2rem;
+            }
+            @media (max-width: 768px) {
+              .services-2col-grid {
+                grid-template-columns: 1fr;
+              }
+            }
+          `}</style>
         </div>
       </section>
 

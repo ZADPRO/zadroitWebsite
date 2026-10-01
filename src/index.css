@@ -63,9 +63,9 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--brand-blue);
 }
 
-/* Gradient Text (Clean Blue / Cyan / Indigo Gradient ONLY) */
+/* Gradient Text (#2C69D1 -> #0ABCF9 Gradient) */
 .gradient-text {
-  background: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #06b6d4 100%);
+  background: linear-gradient(135deg, #2C69D1 0%, #0ABCF9 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -1,20 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock, User, Share2 } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowLeft, Calendar, Clock, User, Share2, Check } from 'lucide-react';
 import blogsData from '../data/blogs.json';
 
 export default function BlogDetail() {
   const { id } = useParams();
   const blog = blogsData.find((b) => b.id === id) || blogsData[0];
+  const [showToast, setShowToast] = useState(false);
+
+  const handleShare = () => {
+    navigator.clipboard.writeText(window.location.href);
+    setShowToast(true);
+    setTimeout(() => {
+      setShowToast(false);
+    }, 3000);
+  };
 
   return (
-    <div style={{ paddingTop: '8rem', paddingBottom: '6rem', background: '#f8fafc' }}>
+    <div style={{ paddingTop: '8rem', paddingBottom: '6rem', background: '#f8fafc', position: 'relative' }}>
       <div className="container" style={{ maxWidth: '850px' }}>
-        <Link to="/blog" style={{ color: '#0284c7', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.95rem', fontWeight: 700, marginBottom: '2rem' }}>
-          <ArrowLeft size={18} /> Back to All Articles
-        </Link>
+        {/* Top Navigation & Category Tag Bar */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2rem', flexWrap: 'wrap', gap: '1rem' }}>
+          <Link to="/blog" style={{ color: '#0284c7', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.95rem', fontWeight: 700 }}>
+            <ArrowLeft size={18} /> Back to All Articles
+          </Link>
 
-        <div className="glass-pill" style={{ marginBottom: '1rem' }}>{blog.category}</div>
+          <div className="glass-pill" style={{ margin: 0 }}>
+            {blog.category}
+          </div>
+        </div>
 
         <h1 style={{ fontSize: '2.8rem', fontWeight: 800, color: '#0f172a', marginBottom: '1.25rem', lineHeight: '1.25' }}>
           {blog.title}
@@ -52,12 +67,46 @@ export default function BlogDetail() {
                 </span>
               ))}
             </div>
-            <button onClick={() => { navigator.clipboard.writeText(window.location.href); alert('Article URL copied to clipboard!'); }} className="btn-secondary" style={{ fontSize: '0.85rem', padding: '8px 16px' }}>
+            <button onClick={handleShare} className="btn-secondary" style={{ fontSize: '0.85rem', padding: '8px 16px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
               <Share2 size={16} /> Share Article
             </button>
           </div>
         </div>
       </div>
+
+      {/* Floating Toast Notification */}
+      <AnimatePresence>
+        {showToast && (
+          <motion.div
+            initial={{ opacity: 0, y: 40, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            transition={{ duration: 0.25, ease: 'easeOut' }}
+            style={{
+              position: 'fixed',
+              bottom: '28px',
+              right: '28px',
+              zIndex: 9999,
+              background: '#0f172a',
+              color: '#ffffff',
+              padding: '12px 20px',
+              borderRadius: '14px',
+              boxShadow: '0 10px 28px rgba(15, 23, 42, 0.25)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              fontSize: '0.92rem',
+              fontWeight: 600,
+              border: '1px solid #334155',
+            }}
+          >
+            <div style={{ width: '22px', height: '22px', borderRadius: '50%', background: '#10b981', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+              <Check size={14} color="#ffffff" />
+            </div>
+            Article URL copied to clipboard!
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
