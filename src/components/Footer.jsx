@@ -67,10 +67,10 @@ export default function Footer() {
   ];
 
   return (
-    <footer style={{ background: 'linear-gradient(135deg, rgb(224, 242, 254) 0%, rgb(224, 231, 255) 100%)', borderTop: '1px solid #bae6fd', paddingTop: '3.5rem', paddingBottom: '1.25rem', color: '#0f172a' }}>
+    <footer style={{ background: 'var(--footer-bg, linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%))', borderTop: '1px solid var(--border-color, #fed7aa)', paddingTop: '3.5rem', paddingBottom: '1.25rem', color: '#0f172a', transition: 'all 0.3s ease' }}>
       <div className="container">
         
-        {/* Top Section: Brand Info + Services + Products (Company Links removed) */}
+        {/* Top Section: Brand Info + Services + Products */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
           
           {/* Column 1: Brand Info & Contact Address */}
@@ -84,15 +84,15 @@ export default function Footer() {
             
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.88rem', color: '#334155', fontWeight: 600 }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                <MapPin size={18} style={{ color: '#0284c7', flexShrink: 0, marginTop: '3px' }} />
+                <MapPin size={18} style={{ color: 'var(--brand-primary, #ea580c)', flexShrink: 0, marginTop: '3px' }} />
                 <span>38/37B, No.1 Logi Street, Gugai, Salem – 636006, Tamil Nadu, India</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <Phone size={18} style={{ color: '#0284c7', flexShrink: 0 }} />
+                <Phone size={18} style={{ color: 'var(--brand-primary, #ea580c)', flexShrink: 0 }} />
                 <a href="tel:04273562462" style={{ color: '#0f172a', textDecoration: 'none', fontWeight: 600 }}>0427 3562462</a>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <Mail size={18} style={{ color: '#0284c7', flexShrink: 0 }} />
+                <Mail size={18} style={{ color: 'var(--brand-primary, #ea580c)', flexShrink: 0 }} />
                 <a href="mailto:info@zadroit.com" style={{ color: '#0f172a', textDecoration: 'none', fontWeight: 600 }}>info@zadroit.com</a>
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function Footer() {
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {servicesData.map((service) => (
                 <li key={service.id}>
-                  <Link to={`/services#${service.id}`} style={{ color: '#334155', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600, transition: 'color 0.2s ease' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#0284c7')} onMouseLeave={(e) => (e.currentTarget.style.color = '#334155')}>
+                  <Link to={`/services#${service.id}`} style={{ color: '#334155', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600, transition: 'color 0.2s ease' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--brand-primary, #ea580c)')} onMouseLeave={(e) => (e.currentTarget.style.color = '#334155')}>
                     {service.title}
                   </Link>
                 </li>
@@ -118,7 +118,7 @@ export default function Footer() {
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {productsData.map((product) => (
                 <li key={product.id}>
-                  <Link to={`/products/${product.id}`} style={{ color: '#334155', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600, transition: 'color 0.2s ease' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#0284c7')} onMouseLeave={(e) => (e.currentTarget.style.color = '#334155')}>
+                  <Link to={`/products/${product.id}`} style={{ color: '#334155', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600, transition: 'color 0.2s ease' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--brand-primary, #ea580c)')} onMouseLeave={(e) => (e.currentTarget.style.color = '#334155')}>
                     {product.name}
                   </Link>
                 </li>
@@ -142,25 +142,25 @@ export default function Footer() {
                 height: '40px',
                 borderRadius: '12px',
                 background: '#ffffff',
-                border: '1.5px solid #bae6fd',
-                color: '#0284c7',
+                border: '1.5px solid var(--border-color, #fed7aa)',
+                color: 'var(--brand-primary, #ea580c)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 textDecoration: 'none',
-                boxShadow: '0 4px 16px rgba(10, 188, 249, 0.3), 0 0 15px rgba(44, 105, 209, 0.2)',
+                boxShadow: '0 4px 16px var(--shadow-glow, rgba(249, 115, 22, 0.25))',
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-3px) scale(1.1)';
-                e.currentTarget.style.boxShadow = '0 8px 24px rgba(10, 188, 249, 0.6), 0 0 25px rgba(44, 105, 209, 0.4)';
-                e.currentTarget.style.borderColor = '#38bdf8';
-                e.currentTarget.style.background = 'linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%)';
+                e.currentTarget.style.boxShadow = '0 8px 24px var(--shadow-glow, rgba(234, 88, 12, 0.5))';
+                e.currentTarget.style.borderColor = 'var(--brand-primary, #f97316)';
+                e.currentTarget.style.background = '#ffffff';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                e.currentTarget.style.boxShadow = '0 4px 16px rgba(10, 188, 249, 0.3), 0 0 15px rgba(44, 105, 209, 0.2)';
-                e.currentTarget.style.borderColor = '#bae6fd';
+                e.currentTarget.style.boxShadow = '0 4px 16px var(--shadow-glow, rgba(249, 115, 22, 0.25))';
+                e.currentTarget.style.borderColor = 'var(--border-color, #fed7aa)';
                 e.currentTarget.style.background = '#ffffff';
               }}
             >
@@ -176,28 +176,28 @@ export default function Footer() {
               <Link
                 to={link.path}
                 style={{ color: '#0f172a', textDecoration: 'none', transition: 'color 0.2s ease' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#0284c7')}
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--brand-primary, #ea580c)')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = '#0f172a')}
               >
                 {link.label}
               </Link>
               {idx < links.length - 1 && (
-                <span style={{ color: '#94a3b8', fontWeight: 300, userSelect: 'none' }}>|</span>
+                <span style={{ color: 'var(--brand-secondary, #fdba74)', fontWeight: 300, userSelect: 'none' }}>|</span>
               )}
             </React.Fragment>
           ))}
         </div>
 
         {/* Horizontal Line Divider */}
-        <hr style={{ border: 'none', borderTop: '1px solid #bae6fd', margin: '0 0 1rem 0', opacity: 0.7 }} />
+        <hr style={{ border: 'none', borderTop: '1px solid var(--border-color, #fed7aa)', margin: '0 0 1rem 0', opacity: 0.8 }} />
 
         {/* Compact Copyright and Privacy Policy Row */}
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '1rem', color: '#475569', fontSize: '0.85rem', fontWeight: 600 }}>
           <span>© {new Date().getFullYear()} ZAdroit IT Solution. All rights reserved.</span>
-          <span style={{ color: '#cbd5e1' }}>•</span>
+          <span style={{ color: 'var(--border-color, #fed7aa)' }}>•</span>
           <Link
             to="/contact"
-            style={{ color: '#0284c7', textDecoration: 'none', fontWeight: 700 }}
+            style={{ color: 'var(--brand-primary, #ea580c)', textDecoration: 'none', fontWeight: 700 }}
             onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
             onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
           >

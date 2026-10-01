@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -16,34 +17,36 @@ import Careers from './pages/Careers';
 
 export default function App() {
   return (
-    <Router>
-      <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: '#ffffff', color: '#0f172a' }}>
-        <Navbar />
-        <main style={{ flex: 1 }}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/services/:id" element={<ServiceDetail />} />
-            
-            {/* Direct Service Subpage URLs matching reference site */}
-            <Route path="/cybersecurity-services" element={<ServiceDetail />} />
-            <Route path="/cloud-computing-solutions" element={<ServiceDetail />} />
-            <Route path="/web-mobile-app-development" element={<ServiceDetail />} />
-            <Route path="/oracle-software-solution" element={<ServiceDetail />} />
-            <Route path="/sap-integration" element={<ServiceDetail />} />
-            <Route path="/ai-machine-learning-development" element={<ServiceDetail />} />
+    <ThemeProvider>
+      <Router>
+        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: 'var(--bg-main, #ffffff)', color: '#0f172a' }}>
+          <Navbar />
+          <main style={{ flex: 1 }}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/services/:id" element={<ServiceDetail />} />
+              
+              {/* Direct Service Subpage URLs matching reference site */}
+              <Route path="/cybersecurity-services" element={<ServiceDetail />} />
+              <Route path="/cloud-computing-solutions" element={<ServiceDetail />} />
+              <Route path="/web-mobile-app-development" element={<ServiceDetail />} />
+              <Route path="/oracle-software-solution" element={<ServiceDetail />} />
+              <Route path="/sap-integration" element={<ServiceDetail />} />
+              <Route path="/ai-machine-learning-development" element={<ServiceDetail />} />
 
-            <Route path="/products" element={<Products />} />
-            <Route path="/products/:id" element={<ProductDetail />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:id" element={<BlogDetail />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/careers" element={<Careers />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+              <Route path="/products" element={<Products />} />
+              <Route path="/products/:id" element={<ProductDetail />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:id" element={<BlogDetail />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/careers" element={<Careers />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }

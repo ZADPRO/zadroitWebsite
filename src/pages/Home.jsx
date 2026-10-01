@@ -20,14 +20,14 @@ function HeroLogoShowcase() {
           width: '320px',
           height: '320px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(10, 188, 249, 0.28) 0%, rgba(44, 105, 209, 0.12) 50%, transparent 75%)',
+          background: 'radial-gradient(circle, rgba(249, 115, 22, 0.35) 0%, rgba(217, 119, 6, 0.16) 50%, transparent 75%)',
           filter: 'blur(30px)',
         }}
       />
 
       {/* Orbiting Concentric Tech Rings */}
-      <div style={{ position: 'absolute', width: '340px', height: '340px', borderRadius: '50%', border: '1.5px dashed rgba(10, 188, 249, 0.4)' }} />
-      <div style={{ position: 'absolute', width: '260px', height: '260px', borderRadius: '50%', border: '1.5px solid rgba(44, 105, 209, 0.25)' }} />
+      <div style={{ position: 'absolute', width: '340px', height: '340px', borderRadius: '50%', border: '1.5px dashed rgba(249, 115, 22, 0.45)' }} />
+      <div style={{ position: 'absolute', width: '260px', height: '260px', borderRadius: '50%', border: '1.5px solid rgba(234, 88, 12, 0.25)' }} />
 
       {/* Main Center Floating ZAdroit Logo Emblem */}
       <motion.div
@@ -51,7 +51,7 @@ function HeroLogoShowcase() {
             height: 'auto',
             maxHeight: '200px',
             objectFit: 'contain',
-            filter: 'drop-shadow(0 12px 30px rgba(10, 188, 249, 0.5)) drop-shadow(0 0 15px rgba(44, 105, 209, 0.3))',
+            filter: 'drop-shadow(0 12px 30px rgba(249, 115, 22, 0.55)) drop-shadow(0 0 15px rgba(234, 88, 12, 0.35))',
           }}
         />
       </motion.div>
@@ -67,18 +67,18 @@ function HeroLogoShowcase() {
           background: '#ffffff',
           padding: '10px 16px',
           borderRadius: '16px',
-          border: '1.5px solid #bae6fd',
-          boxShadow: '0 10px 25px rgba(2, 132, 199, 0.14)',
+          border: '1.5px solid #fed7aa',
+          boxShadow: '0 10px 25px rgba(234, 88, 12, 0.14)',
           display: 'flex',
           alignItems: 'center',
           gap: '10px',
           zIndex: 4,
         }}
       >
-        <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#0284c7', lineHeight: 1 }}>20+</div>
+        <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#ea580c', lineHeight: 1 }}>20+</div>
         <div>
           <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#0f172a' }}>Custom Solutions</div>
-          <div style={{ fontSize: '0.7rem', color: '#0284c7', fontWeight: 700 }}>Delivered Globally</div>
+          <div style={{ fontSize: '0.7rem', color: '#ea580c', fontWeight: 700 }}>Delivered Globally</div>
         </div>
       </motion.div>
 
@@ -93,18 +93,18 @@ function HeroLogoShowcase() {
           background: '#ffffff',
           padding: '10px 16px',
           borderRadius: '16px',
-          border: '1.5px solid #bae6fd',
-          boxShadow: '0 10px 25px rgba(2, 132, 199, 0.14)',
+          border: '1.5px solid #fef08a',
+          boxShadow: '0 10px 25px rgba(245, 158, 11, 0.14)',
           display: 'flex',
           alignItems: 'center',
           gap: '10px',
           zIndex: 4,
         }}
       >
-        <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#2563eb', lineHeight: 1 }}>98%</div>
+        <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#d97706', lineHeight: 1 }}>98%</div>
         <div>
           <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#0f172a' }}>Satisfaction Rate</div>
-          <div style={{ fontSize: '0.7rem', color: '#2563eb', fontWeight: 700 }}>Client Retention</div>
+          <div style={{ fontSize: '0.7rem', color: '#d97706', fontWeight: 700 }}>Client Retention</div>
         </div>
       </motion.div>
 
@@ -119,18 +119,18 @@ function HeroLogoShowcase() {
           background: '#ffffff',
           padding: '10px 16px',
           borderRadius: '16px',
-          border: '1.5px solid #bae6fd',
-          boxShadow: '0 10px 25px rgba(2, 132, 199, 0.14)',
+          border: '1.5px solid #fed7aa',
+          boxShadow: '0 10px 25px rgba(234, 88, 12, 0.14)',
           display: 'flex',
           alignItems: 'center',
           gap: '10px',
           zIndex: 4,
         }}
       >
-        <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#059669', lineHeight: 1 }}>10+ Yrs</div>
+        <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#ea580c', lineHeight: 1 }}>10+ Yrs</div>
         <div>
           <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#0f172a' }}>Industry Expertise</div>
-          <div style={{ fontSize: '0.7rem', color: '#059669', fontWeight: 700 }}>Enterprise IT Leadership</div>
+          <div style={{ fontSize: '0.7rem', color: '#ea580c', fontWeight: 700 }}>Enterprise IT Leadership</div>
         </div>
       </motion.div>
 
@@ -167,7 +167,7 @@ export default function Home() {
   return (
     <div>
       {/* 1. ANIMATED HERO SECTION - FULL SCREEN VIEWPORT */}
-      <section className="hero-fullscreen" style={{ position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg, #e0f2fe 0%, #f8fafc 100%)' }}>
+      <section className="hero-fullscreen" style={{ position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg, #fff7ed 0%, #fffcf8 100%)' }}>
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3rem', alignItems: 'center' }}>
 
@@ -216,7 +216,7 @@ export default function Home() {
       <ProductShowcase />
 
       {/* 3. SERVICES LIST PROVIDING BY ZADROIT */}
-      <section className="section-padding" style={{ background: '#f8fafc', borderBottom: '1px solid #e2e8f0' }}>
+      <section className="section-padding" style={{ background: '#fffcf8', borderBottom: '1px solid #fed7aa' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 3.5rem auto' }}>
             <span className="glass-pill" style={{ marginBottom: '1rem' }}>End-to-End Capabilities</span>
@@ -256,15 +256,15 @@ export default function Home() {
                         width: '52px',
                         height: '52px',
                         borderRadius: '14px',
-                        background: '#e0f2fe',
-                        border: '1px solid #bae6fd',
+                        background: '#fff7ed',
+                        border: '1px solid #fed7aa',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         marginBottom: '1.25rem',
                       }}
                     >
-                      <ServiceIcon size={26} color="#0284c7" />
+                      <ServiceIcon size={26} color="#ea580c" />
                     </div>
 
                     <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.75rem' }}>
@@ -277,14 +277,14 @@ export default function Home() {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem' }}>
                       {service.benefits.slice(0, 3).map((benefit, i) => (
                         <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', color: '#334155' }}>
-                          <CheckCircle2 size={14} color="#059669" />
+                          <CheckCircle2 size={14} color="#ea580c" />
                           <span>{benefit}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <Link to={`/services#${service.id}`} style={{ color: '#0284c7', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.9rem' }}>
+                  <Link to={`/services#${service.id}`} style={{ color: '#ea580c', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.9rem' }}>
                     Read More & Specifications <ArrowRight size={16} />
                   </Link>
                 </motion.div>
