@@ -124,7 +124,7 @@ export default function Products() {
                   color: '#ffffff',
                   display: 'flex',
                   alignItems: 'center',
-                  justify: 'center',
+                  justifyContent: 'center',
                   padding: 0,
                   cursor: 'pointer',
                   transition: 'all 0.25s ease',

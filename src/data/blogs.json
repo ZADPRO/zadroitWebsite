@@ -10,7 +10,12 @@
     "readTime": "6 min read",
     "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
     "content": "Enterprise operations rely heavily on seamless data synchronization. Modern organizations transitioning to SAP S/4HANA often face the challenge of bridging legacy databases with modern web and mobile frontends. In this article, we break down how cloud integration pipelines (SAP CPI) and OData APIs create real-time order-to-cash workflows with zero latency.",
-    "tags": ["SAP", "ERP", "Cloud Integration", "Enterprise"]
+    "tags": [
+      "SAP",
+      "ERP",
+      "Cloud Integration",
+      "Enterprise"
+    ]
   },
   {
     "id": "ai-driven-predictive-health-analytics",
@@ -23,7 +28,12 @@
     "readTime": "8 min read",
     "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
     "content": "Artificial Intelligence in healthcare is moving beyond diagnostic support to proactive risk prediction. By analyzing lifestyle metrics, vitals data, and historical medical records, platforms like MedPredit calculate risk indices before symptoms manifest. Learn how TensorFlow models ensure high accuracy while keeping patient data HIPAA compliant.",
-    "tags": ["AI", "HealthTech", "Machine Learning", "MedPredit"]
+    "tags": [
+      "AI",
+      "HealthTech",
+      "Machine Learning",
+      "MedPredit"
+    ]
   },
   {
     "id": "building-scalable-microfinance-apps",
@@ -35,8 +45,13 @@
     "date": "September 12, 2026",
     "readTime": "5 min read",
     "image": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80",
-    "content": "Microfinance operations operate under unique conditions—field agents working in remote areas with limited connectivity, rapid loan approvals, and strict audit compliance. We share the technical blueprint of ZAdPro MicroFin, covering offline data persistence, automated KYC verification, and instant UPI/Razorpay loan disbursements.",
-    "tags": ["FinTech", "Microfinance", "React Native", "Security"]
+    "content": "Microfinance operations operate under unique conditions field agents working in remote areas with limited connectivity, rapid loan approvals, and strict audit compliance. We share the technical blueprint of ZAdPro MicroFin, covering offline data persistence, automated KYC verification, and instant UPI/Razorpay loan disbursements.",
+    "tags": [
+      "FinTech",
+      "Microfinance",
+      "React Native",
+      "Security"
+    ]
   },
   {
     "id": "zero-trust-cybersecurity-best-practices",
@@ -49,6 +64,11 @@
     "readTime": "7 min read",
     "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
     "content": "With remote work forces and multi-cloud infrastructure becoming standard, traditional network firewalls are no longer sufficient. Zero Trust assumes every user and device is potentially compromised until verified. Read our guide on implementing identity-aware proxies, micro-segmentation, and end-to-end data encryption.",
-    "tags": ["Cybersecurity", "Zero Trust", "Cloud Security", "DevSecOps"]
+    "tags": [
+      "Cybersecurity",
+      "Zero Trust",
+      "Cloud Security",
+      "DevSecOps"
+    ]
   }
 ]

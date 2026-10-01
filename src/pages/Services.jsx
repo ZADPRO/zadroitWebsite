@@ -27,7 +27,7 @@ export default function Services() {
             <span className="gradient-text">Engineered for Scalability</span>
           </h1>
           <p style={{ color: '#334155', fontSize: '1.15rem', maxWidth: '750px', margin: '0 auto' }}>
-            Discover our full spectrum of enterprise capabilities—from Oracle & SAP software integration to cloud native DevOps, mobile applications, and AI machine learning.
+            Discover our full spectrum of enterprise capabilities from Oracle & SAP software integration to cloud native DevOps, mobile applications, and AI machine learning.
           </p>
         </div>
       </section>

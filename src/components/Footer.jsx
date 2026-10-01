@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import servicesData from '../data/services.json';
 import productsData from '../data/products.json';
 import ZadroitLogo from './ZadroitLogo';
@@ -56,93 +56,55 @@ export default function Footer() {
     },
   ];
 
+  const links = [
+    { label: 'Home', path: '/' },
+    { label: 'About Us', path: '/about' },
+    { label: 'Services', path: '/services' },
+    { label: 'Products', path: '/products' },
+    { label: 'Blog', path: '/blog' },
+    { label: 'Careers', path: '/careers' },
+    { label: 'Contact', path: '/contact' },
+  ];
+
   return (
-    <footer style={{ background: '#ffffff', borderTop: '1px solid #e2e8f0', paddingTop: '4rem', paddingBottom: '2rem', color: '#0f172a' }}>
+    <footer style={{ background: 'linear-gradient(135deg, rgb(224, 242, 254) 0%, rgb(224, 231, 255) 100%)', borderTop: '1px solid #bae6fd', paddingTop: '3.5rem', paddingBottom: '1.25rem', color: '#0f172a' }}>
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '3rem', marginBottom: '3.5rem' }}>
+        
+        {/* Top Section: Brand Info + Services + Products (Company Links removed) */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
           
-          {/* Column 1: Brand Info */}
+          {/* Column 1: Brand Info & Contact Address */}
           <div>
             <Link to="/" style={{ textDecoration: 'none', display: 'inline-block', marginBottom: '1.25rem' }}>
               <ZadroitLogo height={46} />
             </Link>
-            <p style={{ color: '#0f172a', fontSize: '0.9rem', lineHeight: '1.7', marginBottom: '1.25rem', fontWeight: 500 }}>
+            <p style={{ color: '#334155', fontSize: '0.9rem', lineHeight: '1.7', marginBottom: '1.25rem', fontWeight: 500, maxWidth: '400px' }}>
               Your trusted partner for custom enterprise software development, cloud infrastructure, AI solutions, SAP integration, and proprietary SaaS platforms.
             </p>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.88rem', color: '#0f172a', marginBottom: '1.5rem', fontWeight: 600 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.88rem', color: '#334155', fontWeight: 600 }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                <MapPin size={18} style={{ color: '#0f172a', flexShrink: 0, marginTop: '3px' }} />
+                <MapPin size={18} style={{ color: '#0284c7', flexShrink: 0, marginTop: '3px' }} />
                 <span>38/37B, No.1 Logi Street, Gugai, Salem – 636006, Tamil Nadu, India</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <Phone size={18} style={{ color: '#0f172a', flexShrink: 0 }} />
+                <Phone size={18} style={{ color: '#0284c7', flexShrink: 0 }} />
                 <a href="tel:04273562462" style={{ color: '#0f172a', textDecoration: 'none', fontWeight: 600 }}>0427 3562462</a>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <Mail size={18} style={{ color: '#0f172a', flexShrink: 0 }} />
+                <Mail size={18} style={{ color: '#0284c7', flexShrink: 0 }} />
                 <a href="mailto:info@zadroit.com" style={{ color: '#0f172a', textDecoration: 'none', fontWeight: 600 }}>info@zadroit.com</a>
               </div>
             </div>
-
-            {/* Social Media Handles */}
-            <div>
-              <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#0f172a', textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block', marginBottom: '0.75rem' }}>
-                Follow Us
-              </span>
-              <div style={{ display: 'flex', gap: '10px' }}>
-                {socialHandles.map((item, idx) => (
-                  <a
-                    key={idx}
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={item.label}
-                    style={{
-                      width: '36px',
-                      height: '36px',
-                      borderRadius: '10px',
-                      background: '#ffffff',
-                      border: '1.5px solid #0f172a',
-                      color: '#0f172a',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      textDecoration: 'none',
-                      transition: 'all 0.2s ease',
-                    }}
-                  >
-                    {item.icon}
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
 
-          {/* Column 2: Quick Links */}
-          <div>
-            <h4 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0f172a', marginBottom: '1.25rem' }}>Company Links</h4>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              {['Home', 'About Us', 'Services', 'Products', 'Blog', 'Careers', 'Contact'].map((item) => {
-                const path = item === 'Home' ? '/' : item === 'About Us' ? '/about' : `/${item.toLowerCase()}`;
-                return (
-                  <li key={item}>
-                    <Link to={path} style={{ color: '#0f172a', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600, transition: 'color 0.2s ease', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                      <ArrowRight size={14} style={{ color: '#0f172a' }} /> {item}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-
-          {/* Column 3: Services */}
+          {/* Column 2: Services */}
           <div>
             <h4 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0f172a', marginBottom: '1.25rem' }}>Services</h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {servicesData.map((service) => (
                 <li key={service.id}>
-                  <Link to={`/services#${service.id}`} style={{ color: '#0f172a', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600, transition: 'color 0.2s ease' }}>
+                  <Link to={`/services#${service.id}`} style={{ color: '#334155', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600, transition: 'color 0.2s ease' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#0284c7')} onMouseLeave={(e) => (e.currentTarget.style.color = '#334155')}>
                     {service.title}
                   </Link>
                 </li>
@@ -150,13 +112,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Products */}
+          {/* Column 3: Products */}
           <div>
-            <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#0f172a', marginBottom: '1.25rem' }}>Products</h4>
+            <h4 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0f172a', marginBottom: '1.25rem' }}>Products</h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {productsData.map((product) => (
                 <li key={product.id}>
-                  <Link to={`/products/${product.id}`} style={{ color: '#0f172a', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600, transition: 'color 0.2s ease' }}>
+                  <Link to={`/products/${product.id}`} style={{ color: '#334155', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600, transition: 'color 0.2s ease' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#0284c7')} onMouseLeave={(e) => (e.currentTarget.style.color = '#334155')}>
                     {product.name}
                   </Link>
                 </li>
@@ -166,13 +128,83 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Bar */}
-        <div style={{ borderTop: '1px solid #e2e8f0', paddingTop: '2rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', color: '#0f172a', fontSize: '0.88rem', fontWeight: 600 }}>
-          <p>© {new Date().getFullYear()} ZAdroit IT Solution. All rights reserved.</p>
-          <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <Link to="/contact" style={{ color: '#0f172a', textDecoration: 'none', fontWeight: 700 }}>Privacy Policy</Link>
-          </div>
+        {/* Social Media Handles Centered */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '14px', marginBottom: '1.25rem' }}>
+          {socialHandles.map((item, idx) => (
+            <a
+              key={idx}
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={item.label}
+              style={{
+                width: '40px',
+                height: '40px',
+                borderRadius: '12px',
+                background: '#ffffff',
+                border: '1.5px solid #bae6fd',
+                color: '#0284c7',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textDecoration: 'none',
+                boxShadow: '0 4px 16px rgba(10, 188, 249, 0.3), 0 0 15px rgba(44, 105, 209, 0.2)',
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-3px) scale(1.1)';
+                e.currentTarget.style.boxShadow = '0 8px 24px rgba(10, 188, 249, 0.6), 0 0 25px rgba(44, 105, 209, 0.4)';
+                e.currentTarget.style.borderColor = '#38bdf8';
+                e.currentTarget.style.background = 'linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.boxShadow = '0 4px 16px rgba(10, 188, 249, 0.3), 0 0 15px rgba(44, 105, 209, 0.2)';
+                e.currentTarget.style.borderColor = '#bae6fd';
+                e.currentTarget.style.background = '#ffffff';
+              }}
+            >
+              {item.icon}
+            </a>
+          ))}
         </div>
+
+        {/* Centered Navigation Links Separated by | */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '0.85rem', marginBottom: '1.25rem', fontSize: '0.95rem', fontWeight: 600 }}>
+          {links.map((link, idx) => (
+            <React.Fragment key={link.label}>
+              <Link
+                to={link.path}
+                style={{ color: '#0f172a', textDecoration: 'none', transition: 'color 0.2s ease' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#0284c7')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = '#0f172a')}
+              >
+                {link.label}
+              </Link>
+              {idx < links.length - 1 && (
+                <span style={{ color: '#94a3b8', fontWeight: 300, userSelect: 'none' }}>|</span>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+
+        {/* Horizontal Line Divider */}
+        <hr style={{ border: 'none', borderTop: '1px solid #bae6fd', margin: '0 0 1rem 0', opacity: 0.7 }} />
+
+        {/* Compact Copyright and Privacy Policy Row */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '1rem', color: '#475569', fontSize: '0.85rem', fontWeight: 600 }}>
+          <span>© {new Date().getFullYear()} ZAdroit IT Solution. All rights reserved.</span>
+          <span style={{ color: '#cbd5e1' }}>•</span>
+          <Link
+            to="/contact"
+            style={{ color: '#0284c7', textDecoration: 'none', fontWeight: 700 }}
+            onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+            onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
+          >
+            Privacy Policy
+          </Link>
+        </div>
+
       </div>
     </footer>
   );

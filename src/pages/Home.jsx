@@ -1,12 +1,167 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Cpu, ShieldCheck, Database, Cloud, Smartphone, Workflow, ChevronRight, Award, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Sparkles, Cpu, ShieldCheck, Database, Cloud, Smartphone, Workflow, ChevronRight, Award, CheckCircle2, Layers, Activity, ArrowUpRight } from 'lucide-react';
 import productsData from '../data/products.json';
 import servicesData from '../data/services.json';
+import logoImg from '../assets/logo.png';
 import ProductShowcase from '../components/ProductShowcase';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Testimonials from '../components/Testimonials';
+
+function HeroLogoShowcase() {
+  return (
+    <div style={{ position: 'relative', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '380px' }}>
+
+      {/* Background Ambient Glow */}
+      <div
+        style={{
+          position: 'absolute',
+          width: '320px',
+          height: '320px',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(10, 188, 249, 0.28) 0%, rgba(44, 105, 209, 0.12) 50%, transparent 75%)',
+          filter: 'blur(30px)',
+        }}
+      />
+
+      {/* Orbiting Concentric Tech Rings */}
+      <div style={{ position: 'absolute', width: '340px', height: '340px', borderRadius: '50%', border: '1.5px dashed rgba(10, 188, 249, 0.4)' }} />
+      <div style={{ position: 'absolute', width: '260px', height: '260px', borderRadius: '50%', border: '1.5px solid rgba(44, 105, 209, 0.25)' }} />
+
+      {/* Main Center Floating ZAdroit Logo Emblem */}
+      <motion.div
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+        style={{
+          width: '260px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 3,
+          position: 'relative',
+          padding: '10px',
+        }}
+      >
+        <img
+          src={logoImg}
+          alt="ZAdroit IT Solutions"
+          style={{
+            width: '100%',
+            height: 'auto',
+            maxHeight: '200px',
+            objectFit: 'contain',
+            filter: 'drop-shadow(0 12px 30px rgba(10, 188, 249, 0.5)) drop-shadow(0 0 15px rgba(44, 105, 209, 0.3))',
+          }}
+        />
+      </motion.div>
+
+      {/* Floating Interactive Badge 1 (Top Left) - 20+ Custom Solutions */}
+      <motion.div
+        animate={{ y: [0, -8, 0] }}
+        transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.2 }}
+        style={{
+          position: 'absolute',
+          top: '15px',
+          left: '-10px',
+          background: '#ffffff',
+          padding: '10px 16px',
+          borderRadius: '16px',
+          border: '1.5px solid #bae6fd',
+          boxShadow: '0 10px 25px rgba(2, 132, 199, 0.14)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
+          zIndex: 4,
+        }}
+      >
+        <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#0284c7', lineHeight: 1 }}>20+</div>
+        <div>
+          <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#0f172a' }}>Custom Solutions</div>
+          <div style={{ fontSize: '0.7rem', color: '#0284c7', fontWeight: 700 }}>Delivered Globally</div>
+        </div>
+      </motion.div>
+
+      {/* Floating Interactive Badge 2 (Top Right) - 98% Satisfaction Rate */}
+      <motion.div
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 3.8, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+        style={{
+          position: 'absolute',
+          top: '25px',
+          right: '-10px',
+          background: '#ffffff',
+          padding: '10px 16px',
+          borderRadius: '16px',
+          border: '1.5px solid #bae6fd',
+          boxShadow: '0 10px 25px rgba(2, 132, 199, 0.14)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
+          zIndex: 4,
+        }}
+      >
+        <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#2563eb', lineHeight: 1 }}>98%</div>
+        <div>
+          <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#0f172a' }}>Satisfaction Rate</div>
+          <div style={{ fontSize: '0.7rem', color: '#2563eb', fontWeight: 700 }}>Client Retention</div>
+        </div>
+      </motion.div>
+
+      {/* Floating Interactive Badge 3 (Bottom Left) - 10+ Yrs Industry Expertise */}
+      <motion.div
+        animate={{ y: [0, 6, 0] }}
+        transition={{ duration: 4.2, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
+        style={{
+          position: 'absolute',
+          bottom: '15px',
+          left: '0px',
+          background: '#ffffff',
+          padding: '10px 16px',
+          borderRadius: '16px',
+          border: '1.5px solid #bae6fd',
+          boxShadow: '0 10px 25px rgba(2, 132, 199, 0.14)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
+          zIndex: 4,
+        }}
+      >
+        <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#059669', lineHeight: 1 }}>10+ Yrs</div>
+        <div>
+          <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#0f172a' }}>Industry Expertise</div>
+          <div style={{ fontSize: '0.7rem', color: '#059669', fontWeight: 700 }}>Enterprise IT Leadership</div>
+        </div>
+      </motion.div>
+
+      {/* Floating Interactive Badge 4 (Bottom Right) - 99.99% Cloud Uptime */}
+      <motion.div
+        animate={{ y: [0, -6, 0] }}
+        transition={{ duration: 3.6, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+        style={{
+          position: 'absolute',
+          bottom: '10px',
+          right: '0px',
+          background: '#ffffff',
+          padding: '10px 16px',
+          borderRadius: '16px',
+          border: '1.5px solid #fef08a',
+          boxShadow: '0 10px 25px rgba(217, 119, 6, 0.14)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
+          zIndex: 4,
+        }}
+      >
+        <div style={{ fontSize: '1.3rem', fontWeight: 800, color: '#d97706', lineHeight: 1 }}>99.99%</div>
+        <div>
+          <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#0f172a' }}>Cloud Uptime</div>
+          <div style={{ fontSize: '0.7rem', color: '#d97706', fontWeight: 700 }}>Enterprise SLA</div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -15,7 +170,7 @@ export default function Home() {
       <section className="hero-fullscreen" style={{ position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg, #e0f2fe 0%, #f8fafc 100%)' }}>
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3rem', alignItems: 'center' }}>
-            
+
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -41,61 +196,16 @@ export default function Home() {
                 </Link>
               </div>
 
-              {/* Stats Highlights */}
-              <div style={{ display: 'flex', gap: '2rem', borderTop: '2px solid #e2e8f0', paddingTop: '1.5rem' }}>
-                <div>
-                  <span style={{ fontSize: '1.8rem', fontWeight: 800, color: '#0284c7', display: 'block' }}>20+</span>
-                  <span style={{ fontSize: '0.85rem', color: '#64748b', fontWeight: 600 }}>Custom Solutions</span>
-                </div>
-                <div>
-                  <span style={{ fontSize: '1.8rem', fontWeight: 800, color: '#2563eb', display: 'block' }}>98%</span>
-                  <span style={{ fontSize: '0.85rem', color: '#64748b', fontWeight: 600 }}>Satisfaction Rate</span>
-                </div>
-                <div>
-                  <span style={{ fontSize: '1.8rem', fontWeight: 800, color: '#059669', display: 'block' }}>10+ Yrs</span>
-                  <span style={{ fontSize: '0.85rem', color: '#64748b', fontWeight: 600 }}>Industry Expertise</span>
-                </div>
-              </div>
             </motion.div>
 
-            {/* Right Visual Floating Card */}
+
+            {/* Right Visual Floating Logo Showcase */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              <div className="glass-panel animate-float" style={{ padding: '2.25rem', borderRadius: '24px', background: '#ffffff' }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <div style={{ width: '44px', height: '44px', borderRadius: '12px', background: 'linear-gradient(135deg, #0284c7, #2563eb)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <Cpu size={24} color="#ffffff" />
-                    </div>
-                    <div>
-                      <h4 style={{ color: '#0f172a', fontWeight: 800, fontSize: '1.1rem' }}>ZAdroit Engine</h4>
-                      <span style={{ fontSize: '0.8rem', color: '#059669', fontWeight: 700 }}>● System Active 99.99%</span>
-                    </div>
-                  </div>
-                  <Award size={26} color="#0284c7" />
-                </div>
-
-                {/* Light Blueprint Console */}
-                <div style={{ background: '#f0f9ff', borderRadius: '12px', padding: '1.25rem', fontFamily: 'monospace', fontSize: '0.85rem', color: '#0f172a', marginBottom: '1.5rem', border: '1.5px solid #bae6fd' }}>
-                  <div style={{ color: '#0284c7', fontWeight: 'bold' }}>// Architecture Initialization</div>
-                  <div><span style={{ color: '#2563eb', fontWeight: 'bold' }}>const</span> app = <span style={{ color: '#0284c7' }}>initZadroitEnterprise</span>({'{\n  cloud: "AWS / OCI",\n  sap: true,\n  aiModels: ["MedPredit", "MicroFin"]\n}'});</div>
-                  <div style={{ color: '#059669', marginTop: '6px', fontWeight: 'bold' }}>✓ Enterprise Stack Ready</div>
-                </div>
-
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                  <div style={{ background: '#f8fafc', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-                    <span style={{ fontSize: '0.75rem', color: '#0284c7', fontWeight: 700 }}>Cloud Uptime</span>
-                    <h5 style={{ fontSize: '1.2rem', color: '#0f172a', fontWeight: 800 }}>99.99% SLA</h5>
-                  </div>
-                  <div style={{ background: '#f8fafc', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-                    <span style={{ fontSize: '0.75rem', color: '#2563eb', fontWeight: 700 }}>Security VAPT</span>
-                    <h5 style={{ fontSize: '1.2rem', color: '#0f172a', fontWeight: 800 }}>ISO & HIPAA</h5>
-                  </div>
-                </div>
-              </div>
+              <HeroLogoShowcase />
             </motion.div>
 
           </div>

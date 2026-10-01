@@ -1,7 +1,10 @@
 [
   {
     "id": "cybersecurity-services",
-    "slugs": ["cybersecurity-services", "cybersecurity"],
+    "slugs": [
+      "cybersecurity-services",
+      "cybersecurity"
+    ],
     "title": "Cybersecurity Services",
     "tagline": "Advanced Threat Protection, Penetration Testing & Enterprise Compliance",
     "icon": "ShieldCheck",
@@ -28,10 +31,26 @@
       }
     ],
     "process": [
-      { "step": "01", "title": "Discovery & Risk Assessment", "desc": "Auditing existing infrastructure, assets, and data flows to map security risks and compliance gaps." },
-      { "step": "02", "title": "Security Architecture Design", "desc": "Designing a tailored zero-trust security architecture, access controls, and firewall rules." },
-      { "step": "03", "title": "Implementation & Hardening", "desc": "Deploying VAPT patches, SOC monitoring tools, encryption keys, and security software." },
-      { "step": "04", "title": "Continuous Defense & Support", "desc": "Providing round-the-clock threat monitoring, vulnerability patching, and security awareness training." }
+      {
+        "step": "01",
+        "title": "Discovery & Risk Assessment",
+        "desc": "Auditing existing infrastructure, assets, and data flows to map security risks and compliance gaps."
+      },
+      {
+        "step": "02",
+        "title": "Security Architecture Design",
+        "desc": "Designing a tailored zero-trust security architecture, access controls, and firewall rules."
+      },
+      {
+        "step": "03",
+        "title": "Implementation & Hardening",
+        "desc": "Deploying VAPT patches, SOC monitoring tools, encryption keys, and security software."
+      },
+      {
+        "step": "04",
+        "title": "Continuous Defense & Support",
+        "desc": "Providing round-the-clock threat monitoring, vulnerability patching, and security awareness training."
+      }
     ],
     "benefits": [
       "Zero-downtime protection against ransomware and phishing attacks",
@@ -56,7 +75,10 @@
   },
   {
     "id": "cloud-computing-solutions",
-    "slugs": ["cloud-computing-solutions", "cloud-computing"],
+    "slugs": [
+      "cloud-computing-solutions",
+      "cloud-computing"
+    ],
     "title": "Cloud Computing Solutions",
     "tagline": "Scalable Cloud Architecture, Migration & DevOps Infrastructure Automation",
     "icon": "Cloud",
@@ -83,10 +105,26 @@
       }
     ],
     "process": [
-      { "step": "01", "title": "Infrastructure Audit", "desc": "Evaluating legacy workloads, dependency mapping, and business SLA requirements." },
-      { "step": "02", "title": "Cloud Blueprint Design", "desc": "Architecting resilient multi-cloud network topologies, security groups, and storage policies." },
-      { "step": "03", "title": "Migration & Pipeline Setup", "desc": "Executing data migration and establishing automated CI/CD deployment channels." },
-      { "step": "04", "title": "Optimization & Managed Cloud", "desc": "Continuous performance tuning, autoscaling configuration, and 24/7 cloud monitoring." }
+      {
+        "step": "01",
+        "title": "Infrastructure Audit",
+        "desc": "Evaluating legacy workloads, dependency mapping, and business SLA requirements."
+      },
+      {
+        "step": "02",
+        "title": "Cloud Blueprint Design",
+        "desc": "Architecting resilient multi-cloud network topologies, security groups, and storage policies."
+      },
+      {
+        "step": "03",
+        "title": "Migration & Pipeline Setup",
+        "desc": "Executing data migration and establishing automated CI/CD deployment channels."
+      },
+      {
+        "step": "04",
+        "title": "Optimization & Managed Cloud",
+        "desc": "Continuous performance tuning, autoscaling configuration, and 24/7 cloud monitoring."
+      }
     ],
     "benefits": [
       "Cost-effective and dynamically scalable cloud IT infrastructure",
@@ -111,7 +149,10 @@
   },
   {
     "id": "web-mobile-app-development",
-    "slugs": ["web-mobile-app-development", "web-mobile-app"],
+    "slugs": [
+      "web-mobile-app-development",
+      "web-mobile-app"
+    ],
     "title": "Web & Mobile App Development",
     "tagline": "Custom High-Performance Web Portals & Native Cross-Platform Mobile Applications",
     "icon": "Smartphone",
@@ -138,10 +179,26 @@
       }
     ],
     "process": [
-      { "step": "01", "title": "Discovery & Feature Scope", "desc": "Defining target audience personas, user journeys, functional requirements, and tech stack." },
-      { "step": "02", "title": "UI/UX & System Design", "desc": "Crafting interactive Figma prototypes and designing scalable database architecture." },
-      { "step": "03", "title": "Agile Sprint Development", "desc": "Building app features in transparent 2-week iterations with continuous QA testing." },
-      { "step": "04", "title": "App Store Launch & Support", "desc": "Deploying apps to Apple App Store & Google Play, followed by SLA maintenance." }
+      {
+        "step": "01",
+        "title": "Discovery & Feature Scope",
+        "desc": "Defining target audience personas, user journeys, functional requirements, and tech stack."
+      },
+      {
+        "step": "02",
+        "title": "UI/UX & System Design",
+        "desc": "Crafting interactive Figma prototypes and designing scalable database architecture."
+      },
+      {
+        "step": "03",
+        "title": "Agile Sprint Development",
+        "desc": "Building app features in transparent 2-week iterations with continuous QA testing."
+      },
+      {
+        "step": "04",
+        "title": "App Store Launch & Support",
+        "desc": "Deploying apps to Apple App Store & Google Play, followed by SLA maintenance."
+      }
     ],
     "benefits": [
       "User-friendly, intuitive interface designed for peak engagement",
@@ -166,14 +223,17 @@
   },
   {
     "id": "oracle-software-solution",
-    "slugs": ["oracle-software-solution", "oracle-software"],
+    "slugs": [
+      "oracle-software-solution",
+      "oracle-software"
+    ],
     "title": "Oracle Software Solutions",
     "tagline": "Oracle ERP Cloud Implementation, Migration, Custom APEX & Database Services",
     "icon": "Database",
     "shortDesc": "Unlock your enterprise’s potential with our Oracle Software Solutions, offering robust ERP, database management, and cloud applications for efficiency, scalability, and security. Tailored to your business needs.",
     "fullDesc": "Unlock your enterprise’s potential with our Oracle Software Solutions, offering robust ERP, database management, and cloud applications for efficiency, scalability, and security. Tailored to your business needs.",
     "heroDesc": "Streamline enterprise operations with tailored Oracle ERP, NetSuite, and E-Business Suite software solutions. We automate finance, supply chain, HR, and custom database workflows for global businesses.",
-    "overview": "Oracle ERP provides an enterprise-grade cloud foundation that unifies core business operations—from financial reporting and inventory management to human resources and CRM. Zadroit specializes in Oracle ERP deployment, seamless migration from legacy platforms, custom Oracle APEX module development, and 24/7 database administration.",
+    "overview": "Oracle ERP provides an enterprise-grade cloud foundation that unifies core business operations from financial reporting and inventory management to human resources and CRM. Zadroit specializes in Oracle ERP deployment, seamless migration from legacy platforms, custom Oracle APEX module development, and 24/7 database administration.",
     "capabilities": [
       {
         "title": "Oracle ERP Implementation & Customization",
@@ -193,10 +253,26 @@
       }
     ],
     "process": [
-      { "step": "01", "title": "Business Process Audit", "desc": "Mapping current financial and supply chain workflows to Oracle ERP standards." },
-      { "step": "02", "title": "System Design & Customization", "desc": "Configuring Oracle modules and designing custom PL/SQL integration adapters." },
-      { "step": "03", "title": "Data Migration & Validation", "desc": "Extracting, cleansing, and loading legacy master data into Oracle environments." },
-      { "step": "04", "title": "Go-Live & Post-Launch Support", "desc": "Executing seamless cutover, staff training, and round-the-clock DBA maintenance." }
+      {
+        "step": "01",
+        "title": "Business Process Audit",
+        "desc": "Mapping current financial and supply chain workflows to Oracle ERP standards."
+      },
+      {
+        "step": "02",
+        "title": "System Design & Customization",
+        "desc": "Configuring Oracle modules and designing custom PL/SQL integration adapters."
+      },
+      {
+        "step": "03",
+        "title": "Data Migration & Validation",
+        "desc": "Extracting, cleansing, and loading legacy master data into Oracle environments."
+      },
+      {
+        "step": "04",
+        "title": "Go-Live & Post-Launch Support",
+        "desc": "Executing seamless cutover, staff training, and round-the-clock DBA maintenance."
+      }
     ],
     "benefits": [
       "Real-time operational data insights and executive reporting",
@@ -221,7 +297,10 @@
   },
   {
     "id": "sap-integration",
-    "slugs": ["sap-integration", "sap-integration"],
+    "slugs": [
+      "sap-integration",
+      "sap-integration"
+    ],
     "title": "SAP Integration",
     "tagline": "Real-Time SAP S/4HANA & ECC Integration, OData APIs & Middleware Connectors",
     "icon": "Workflow",
@@ -248,10 +327,26 @@
       }
     ],
     "process": [
-      { "step": "01", "title": "Architecture Mapping", "desc": "Analyzing SAP data structures, RFC endpoints, and third-party API requirements." },
-      { "step": "02", "title": "Middleware & OData Setup", "desc": "Configuring SAP CPI integration flows and developing custom ABAP endpoints." },
-      { "step": "03", "title": "End-to-End Testing", "desc": "Validating bi-directional data flow, error handling, and payload security under heavy load." },
-      { "step": "04", "title": "Deployment & Monitoring", "desc": "Deploying integration pipelines into production with automated exception alerting." }
+      {
+        "step": "01",
+        "title": "Architecture Mapping",
+        "desc": "Analyzing SAP data structures, RFC endpoints, and third-party API requirements."
+      },
+      {
+        "step": "02",
+        "title": "Middleware & OData Setup",
+        "desc": "Configuring SAP CPI integration flows and developing custom ABAP endpoints."
+      },
+      {
+        "step": "03",
+        "title": "End-to-End Testing",
+        "desc": "Validating bi-directional data flow, error handling, and payload security under heavy load."
+      },
+      {
+        "step": "04",
+        "title": "Deployment & Monitoring",
+        "desc": "Deploying integration pipelines into production with automated exception alerting."
+      }
     ],
     "benefits": [
       "Smooth, automated data synchronization between SAP and external apps",
@@ -276,7 +371,10 @@
   },
   {
     "id": "ai-machine-learning-development",
-    "slugs": ["ai-machine-learning-development", "ai-machine-learning"],
+    "slugs": [
+      "ai-machine-learning-development",
+      "ai-machine-learning"
+    ],
     "title": "AI & Machine Learning Development",
     "tagline": "Custom AI Automation, Predictive Analytics, Natural Language Processing & Computer Vision",
     "icon": "Cpu",
@@ -303,10 +401,26 @@
       }
     ],
     "process": [
-      { "step": "01", "title": "Data Audit & Feasibility", "desc": "Evaluating client dataset quality, labeling requirements, and AI objective metrics." },
-      { "step": "02", "title": "Model Training & Tuning", "desc": "Selecting neural network architectures, feature engineering, and model validation." },
-      { "step": "03", "title": "API Endpoint Integration", "desc": "Deploying models as scalable REST microservices integrated with your web/mobile apps." },
-      { "step": "04", "title": "Continuous Learning & MLOps", "desc": "Monitoring model drift, automated retraining pipelines, and accuracy optimization." }
+      {
+        "step": "01",
+        "title": "Data Audit & Feasibility",
+        "desc": "Evaluating client dataset quality, labeling requirements, and AI objective metrics."
+      },
+      {
+        "step": "02",
+        "title": "Model Training & Tuning",
+        "desc": "Selecting neural network architectures, feature engineering, and model validation."
+      },
+      {
+        "step": "03",
+        "title": "API Endpoint Integration",
+        "desc": "Deploying models as scalable REST microservices integrated with your web/mobile apps."
+      },
+      {
+        "step": "04",
+        "title": "Continuous Learning & MLOps",
+        "desc": "Monitoring model drift, automated retraining pipelines, and accuracy optimization."
+      }
     ],
     "benefits": [
       "Data-driven decision making powered by predictive machine learning insights",

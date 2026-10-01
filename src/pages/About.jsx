@@ -1,6 +1,307 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Sparkles, Target, Eye } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Sparkles, Target, Eye, Camera, Maximize2, X } from 'lucide-react';
+
+// Diverse Gallery Photos grouped into 4 Vertical Columns
+const column1Photos = [
+  { id: 'c1-1', height: '340px', image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80' },
+  { id: 'c1-2', height: '260px', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80' },
+  { id: 'c1-3', height: '380px', image: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80' },
+  { id: 'c1-4', height: '280px', image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80' },
+];
+
+const column2Photos = [
+  { id: 'c2-1', height: '280px', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80' },
+  { id: 'c2-2', height: '390px', image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80' },
+  { id: 'c2-3', height: '310px', image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80' },
+  { id: 'c2-4', height: '350px', image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80' },
+];
+
+const column3Photos = [
+  { id: 'c3-1', height: '370px', image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80' },
+  { id: 'c3-2', height: '290px', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80' },
+  { id: 'c3-3', height: '360px', image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80' },
+  { id: 'c3-4', height: '320px', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80' },
+];
+
+const column4Photos = [
+  { id: 'c4-1', height: '310px', image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80' },
+  { id: 'c4-2', height: '380px', image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80' },
+  { id: 'c4-3', height: '270px', image: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=800&q=80' },
+  { id: 'c4-4', height: '350px', image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80' },
+];
+
+function VerticalMasonryGallery() {
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
+
+  return (
+    <section className="section-padding" style={{ background: '#f8fafc', borderTop: '1px solid #e2e8f0', overflow: 'hidden' }}>
+
+      {/* Keyframes & Hover Freeze CSS matching the screen recording */}
+      <style>{`
+        @keyframes verticalMarqueeUp {
+          0% { transform: translateY(0%); }
+          100% { transform: translateY(-50%); }
+        }
+        @keyframes verticalMarqueeDown {
+          0% { transform: translateY(-50%); }
+          100% { transform: translateY(0%); }
+        }
+        .vertical-gallery-wrapper {
+          position: relative;
+          width: 100%;
+          height: 640px;
+          overflow: hidden;
+        }
+        .vertical-gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 0.5rem;
+          height: 100%;
+        }
+        @media (max-width: 992px) {
+          .vertical-gallery-grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+        @media (max-width: 640px) {
+          .vertical-gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        .vertical-col-track-up {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          animation: verticalMarqueeUp 26s linear infinite;
+        }
+        .vertical-col-track-down {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          animation: verticalMarqueeDown 30s linear infinite;
+        }
+        .vertical-col-track-up-alt {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          animation: verticalMarqueeUp 32s linear infinite;
+        }
+        .vertical-col-track-down-alt {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          animation: verticalMarqueeDown 28s linear infinite;
+        }
+        .vertical-gallery-wrapper:hover .vertical-col-track-up,
+        .vertical-gallery-wrapper:hover .vertical-col-track-down,
+        .vertical-gallery-wrapper:hover .vertical-col-track-up-alt,
+        .vertical-gallery-wrapper:hover .vertical-col-track-down-alt {
+          animation-play-state: paused !important;
+        }
+        .vertical-photo-card {
+          border-radius: 10px;
+          overflow: hidden;
+          cursor: pointer;
+          position: relative;
+          background: #0f172a;
+        }
+      `}</style>
+
+      <div className="container" style={{ marginBottom: '2rem' }}>
+        <div style={{ textAlign: 'center', maxWidth: '650px', margin: '0 auto' }}>
+          <div className="glass-pill" style={{ marginBottom: '1rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+            <Camera size={16} style={{ color: '#0284c7' }} /> Our Memories
+          </div>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#0f172a' }}>
+            Life & Moments at <span className="gradient-text">ZAdroit</span>
+          </h2>
+          <p style={{ color: '#64748b', fontSize: '0.95rem', marginTop: '0.5rem' }}>
+            Hover anywhere over the gallery to freeze auto-scrolling and view any memory in detail.
+          </p>
+        </div>
+      </div>
+
+      <div className="container" style={{ maxWidth: '1200px' }}>
+        <div className="vertical-gallery-wrapper">
+
+          {/* Top & Bottom Subtle Fade Overlay */}
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              height: '60px',
+              background: 'linear-gradient(to bottom, #f8fafc 0%, rgba(248, 250, 252, 0) 100%)',
+              zIndex: 10,
+              pointerEvents: 'none',
+            }}
+          />
+          <div
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              height: '60px',
+              background: 'linear-gradient(to top, #f8fafc 0%, rgba(248, 250, 252, 0) 100%)',
+              zIndex: 10,
+              pointerEvents: 'none',
+            }}
+          />
+
+          <div className="vertical-gallery-grid">
+
+            {/* Column 1 Moving Up */}
+            <div style={{ overflow: 'hidden' }}>
+              <div className="vertical-col-track-up">
+                {[...column1Photos, ...column1Photos].map((photo, index) => (
+                  <div
+                    key={`c1-${index}`}
+                    className="vertical-photo-card"
+                    onClick={() => setSelectedPhoto(photo)}
+                    style={{ height: photo.height, width: '100%' }}
+                  >
+                    <img src={photo.image} alt="ZAdroit Memory" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Column 2 Moving Down */}
+            <div style={{ overflow: 'hidden' }}>
+              <div className="vertical-col-track-down">
+                {[...column2Photos, ...column2Photos].map((photo, index) => (
+                  <div
+                    key={`c2-${index}`}
+                    className="vertical-photo-card"
+                    onClick={() => setSelectedPhoto(photo)}
+                    style={{ height: photo.height, width: '100%' }}
+                  >
+                    <img src={photo.image} alt="ZAdroit Memory" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Column 3 Moving Up */}
+            <div style={{ overflow: 'hidden' }}>
+              <div className="vertical-col-track-up-alt">
+                {[...column3Photos, ...column3Photos].map((photo, index) => (
+                  <div
+                    key={`c3-${index}`}
+                    className="vertical-photo-card"
+                    onClick={() => setSelectedPhoto(photo)}
+                    style={{ height: photo.height, width: '100%' }}
+                  >
+                    <img src={photo.image} alt="ZAdroit Memory" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Column 4 Moving Down */}
+            <div style={{ overflow: 'hidden' }}>
+              <div className="vertical-col-track-down-alt">
+                {[...column4Photos, ...column4Photos].map((photo, index) => (
+                  <div
+                    key={`c4-${index}`}
+                    className="vertical-photo-card"
+                    onClick={() => setSelectedPhoto(photo)}
+                    style={{ height: photo.height, width: '100%' }}
+                  >
+                    <img src={photo.image} alt="ZAdroit Memory" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      {/* Lightbox Modal Overlay */}
+      <AnimatePresence>
+        {selectedPhoto && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedPhoto(null)}
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: 'rgba(15, 23, 42, 0.88)',
+              backdropFilter: 'blur(12px)',
+              zIndex: 1000,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '2rem',
+            }}
+          >
+            <motion.div
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              style={{
+                position: 'relative',
+                maxWidth: '900px',
+                maxHeight: '85vh',
+                width: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <button
+                onClick={() => setSelectedPhoto(null)}
+                style={{
+                  position: 'absolute',
+                  top: '-50px',
+                  right: '0px',
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: '50%',
+                  background: '#ffffff',
+                  color: '#0f172a',
+                  border: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  cursor: 'pointer',
+                  boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
+                  zIndex: 10,
+                }}
+              >
+                <X size={22} />
+              </button>
+
+              <img
+                src={selectedPhoto.image}
+                alt="ZAdroit Memory Full View"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  maxHeight: '80vh',
+                  objectFit: 'contain',
+                  borderRadius: '16px',
+                  boxShadow: '0 25px 60px rgba(0, 0, 0, 0.6)',
+                }}
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+    </section>
+  );
+}
 
 export default function About() {
   const teamMembers = [
@@ -32,14 +333,14 @@ export default function About() {
 
   return (
     <div>
-      {/* 1. HERO BANNER SECTION - FULL SCREEN VIEWPORT */}
+      {/* 1. HERO BANNER SECTION */}
       <section className="hero-fullscreen" style={{ position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg, #e0f2fe 0%, #f8fafc 100%)' }}>
         <div className="container" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
           <div className="glass-pill" style={{ marginBottom: '1.25rem' }}>
             <Sparkles size={16} /> About ZAdroit IT Solution
           </div>
           <h1 style={{ fontSize: '3.2rem', fontWeight: 800, marginBottom: '1.25rem', color: '#0f172a' }}>
-            Your Vision, Our Technology—<br />
+            Your Vision, Our Technology<br />
             <span className="gradient-text">Together We Build The Future</span>
           </h1>
           <p style={{ color: '#334155', fontSize: '1.15rem', maxWidth: '750px', margin: '0 auto' }}>
@@ -61,7 +362,7 @@ export default function About() {
                 What started as a small team of passionate tech experts in Salem, Tamil Nadu, has grown into a trusted global IT solutions provider. With over a decade of hands-on experience, we help businesses streamline operations, boost productivity, and stay ahead with cutting-edge technology.
               </p>
               <p style={{ color: '#64748b', fontSize: '0.98rem', lineHeight: '1.7' }}>
-                Driven by continuous innovation and strong client partnerships, our mission remains unchanged—empowering businesses of all sizes with future-ready digital solutions.
+                Driven by continuous innovation and strong client partnerships, our mission remains unchanged empowering businesses of all sizes with future-ready digital solutions.
               </p>
             </motion.div>
 
@@ -102,7 +403,7 @@ export default function About() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '2rem' }}>
             {[
-              { title: 'Result Driven', desc: 'We help clients achieve concrete financial goals—increasing revenue, reducing operational waste, and enhancing brand value.' },
+              { title: 'Result Driven', desc: 'We help clients achieve concrete financial goals increasing revenue, reducing operational waste, and enhancing brand value.' },
               { title: 'Tailor-Made Solutions', desc: 'Strong implementation capabilities across Enterprise Web, Mobile Apps, Cloud Infrastructure, AI models, and Digital Experiences.' },
               { title: 'Consultative Client Partnership', desc: 'We believe in creative, consultative technology partnerships with our vision to act as your long-term trusted advisor.' },
               { title: 'Accelerated Time to Market', desc: 'Best-in-class agile delivery methods, CI/CD tools, and component libraries that accelerate launch schedules.' }
@@ -116,7 +417,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* 4. OUR CORE BELIEFS (VISION & MISSION) */}
+      {/* 4. OUR CORE BELIEFS */}
       <section className="section-padding" style={{ background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 3.5rem auto' }}>
@@ -153,7 +454,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* 5. OUR TEAM */}
+      {/* 5. MEET OUR TEAM */}
       <section className="section-padding" style={{ background: '#ffffff' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 3.5rem auto' }}>
@@ -162,7 +463,7 @@ export default function About() {
               Meet Our <span className="gradient-text">Team</span>
             </h2>
             <p style={{ color: '#475569', fontSize: '1.05rem', marginTop: '0.5rem' }}>
-              Your vision, our technology—together, we build the future.
+              Your vision, our technology together, we build the future.
             </p>
           </div>
 
@@ -200,6 +501,9 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* 6. VERTICAL MASONRY MULTI-COLUMN AUTO-SCROLL GALLERY (EXACT MATCH FOR USER RECORDING) */}
+      <VerticalMasonryGallery />
     </div>
   );
 }

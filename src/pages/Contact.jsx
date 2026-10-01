@@ -53,7 +53,7 @@ function ServiceModalSelect({ value, isProduct, onChange }) {
           outline: 'none',
           display: 'flex',
           alignItems: 'center',
-          justify: 'space-between',
+          justifyContent: 'space-between',
           cursor: 'pointer',
           boxShadow: '0 2px 6px rgba(2, 132, 199, 0.04)',
           transition: 'all 0.2s ease',
@@ -143,7 +143,7 @@ function ServiceModalSelect({ value, isProduct, onChange }) {
                       color: '#64748b',
                       display: 'flex',
                       alignItems: 'center',
-                      justify: 'center',
+                      justifyContent: 'center',
                       cursor: 'pointer',
                       transition: 'all 0.2s ease',
                     }}
@@ -226,7 +226,7 @@ function ServiceModalSelect({ value, isProduct, onChange }) {
                                   transition: 'all 0.2s ease',
                                   display: 'flex',
                                   alignItems: 'center',
-                                  justify: 'space-between',
+                                  justifyContent: 'space-between',
                                   boxShadow: isSelected ? '0 4px 12px rgba(2, 132, 199, 0.12)' : '0 2px 6px rgba(0,0,0,0.02)',
                                 }}
                                 onMouseEnter={(e) => {
@@ -390,7 +390,7 @@ export default function Contact() {
                 Send Us a Message
               </h3>
               <p style={{ color: '#64748b', fontSize: '0.95rem', marginBottom: '1.75rem' }}>
-                Submitting this form dispatches your project details directly to <strong>{emailConfig.receiveEmailId}</strong>.
+                Submitting this form dispatches your project details directly to us.
               </p>
 
               {submitted ? (
@@ -532,7 +532,7 @@ export default function Contact() {
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Briefly describe your project requirements, scope, or timeline..."
+                      placeholder="Describe your requirements"
                       style={{
                         width: '100%',
                         padding: '12px 16px',
@@ -555,7 +555,7 @@ export default function Contact() {
 
           </div>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   );
 }
